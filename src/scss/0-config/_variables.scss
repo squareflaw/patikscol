@@ -32,13 +32,13 @@ $navy: 			#000080;
 
 
 // $custom-primary-color: hsl(180,100%,40%);
-// $palette-color-1: #48A29F;
-// $palette-color-2: #C63754; 
+$palette-color-1: #F7C882;
+$palette-color-2: #ba4c20; 
 
 
 
-$primary-color:		$maroon;
-$secundary-color:	$lavender;
+$primary-color:		$palette-color-1;
+$secundary-color:	$palette-color-2;
 $important-color:	$blue;
 $link-color:		$blue;
 
