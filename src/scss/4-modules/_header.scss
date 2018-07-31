@@ -1,0 +1,106 @@
+.header {
+  width: 100%;
+  height: 10vh;
+  position: fixed;
+  display: flex;
+  // display: none;
+  background: $white;
+  color: $black;
+  box-shadow: 1px 1px 1px 1px hsla(0,0%,0%,0.25);
+
+  .main-logo {
+    height: 9vh;
+    width: 9vh;
+  }
+
+}
+
+.menu-btn {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 5;
+  cursor: pointer;
+  @include transition;
+
+  &__line {
+    width: 40px;
+    height: 5px;
+    margin: 0 0 5px 0;
+    background: $black;
+    @include transition;
+  }
+
+
+  //rotate into X 
+  &.close {
+    transform: rotate(180deg);
+
+    .menu-btn__line {
+      &:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 7px);
+        background: $primary-color;
+      }
+
+
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+
+      &:nth-child(3) {
+        transform: rotate(-45deg) translate(8px, -9px);
+        background: $primary-color;
+      }
+    }
+  }
+}
+
+ 
+
+
+
+
+
+
+.menu {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 4;
+
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+
+  background: $black;
+  color: $white;
+
+  transform: translate(0,-100vh);
+  @include transition;
+
+  &.show {
+    transform: translate(0,0);
+    @include transition;
+  }
+
+
+  &-nav{
+    @include reset-list;
+    @include flexCenter;
+    flex-flow: column wrap;
+
+    font-size: 2rem;
+
+    
+
+
+    &__item {
+      margin: 0.8rem;
+    }
+
+    &__item.current {
+      color: $primary-color;
+    }
+  }
+}

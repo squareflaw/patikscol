@@ -1,0 +1,10 @@
+
+.icon {
+	margin: 20px;
+  @include transition;
+  
+  &:hover {
+    color: $primary-color;
+    @include transition;
+  }	
+}

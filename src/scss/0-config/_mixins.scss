@@ -1,0 +1,51 @@
+
+
+
+
+@mixin reset-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+
+// Media Queries
+//
+// Allows you to use inline media queries. Includes options for `$fix-mqs`.
+//
+// $breakpoint - Desired breakpoint. Can be variable or unit.
+// $query - Defaults to `min-width`.
+// $type - Defaults to `screen`.
+
+@mixin media($breakpoint, $query: 'min-width', $type: 'screen') {
+    @media #{$type} and (#{$query}: #{$breakpoint}) { @content; }
+}
+
+
+
+
+
+
+
+
+
+@mixin fluid-font-size($min-font-size, $max-font-size, $min-screen-size, $max-screen-size){
+  font-size: calc(#{$min-font-size}px + (#{$max-font-size} - #{$min-font-size}) * (100vw - #{$min-screen-size}px)/(#{$max-screen-size} - #{$min-screen-size}))
+}
+
+
+//global transition
+
+@mixin transition {
+  transition: all 0.5s ease-out;
+}
+
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
