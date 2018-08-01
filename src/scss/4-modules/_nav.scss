@@ -1,0 +1,74 @@
+.menu-btn {
+  position: fixed;
+  top: 1.5vh;
+  right: 1.5vh;
+  z-index: 5;
+  cursor: pointer;
+  @include transition;
+
+  &__line {
+    width: 40px;
+    height: 5px;
+    margin: 0 0 5px 0;
+    background: $full-white; 
+    @include transition;
+  }
+
+
+  
+}
+
+ 
+
+
+
+
+
+
+.menu {
+  width: 100vw;
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  z-index: -1;
+  @include flexCenter;
+
+
+  background: darken($primary-color,20%);
+  color: $white;
+
+  transform: translate(0,-100vh);
+  @include transition;
+  transition-duration: 1s;
+
+
+
+
+  &-nav{
+    @include reset-list;
+    height: 100vh;
+    max-width: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-flow: column wrap;
+
+    font-size: 1.8rem;
+
+    
+
+
+    &__item {
+      margin: 1.2rem;
+      @include transition
+
+      & > *:hover {
+        color: $secundary-color;
+        border-left: 2px solid $secundary-color;
+        // margin-left: 1rem;
+        padding-left: 1rem;
+        @include transition
+      }
+    }
+  }
+}

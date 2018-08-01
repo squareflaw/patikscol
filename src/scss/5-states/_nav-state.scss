@@ -1,0 +1,45 @@
+
+/*--------------------------------------------------------
+Rotate menu button into X 
+--------------------------------------------------------*/
+
+.menu-btn.isClosed {
+  transform: rotate(180deg);
+
+  .menu-btn__line {
+
+    &:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 7px);
+    }
+
+
+    &:nth-child(2) {
+      opacity: 0;
+    }
+
+
+    &:nth-child(3) {
+      transform: rotate(-45deg) translate(8px, -9px);
+    }
+  }
+}
+
+
+
+
+
+
+/*--------------------------------------------------------
+Menu dropdown 
+--------------------------------------------------------*/
+
+.menu.isShown {
+  transform: translate(0,0);
+  @include transition;
+  transition-duration: 1s;
+}
+
+
+.menu-nav__item.isCurrent {
+  color: $secundary-color;
+}

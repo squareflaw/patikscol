@@ -9,10 +9,10 @@ const NavItems = document.querySelectorAll('.menu-nav__item');
 
 
 menuBtn.addEventListener('click', function(e) {    
-    menuBtn.classList.toggle('close');
-    menu.classList.toggle('show');
-    menuNav.classList.toggle('show');
-    NavItems.forEach(item => item.classList.toggle('show'));
+    menuBtn.classList.toggle('isClosed');
+    menu.classList.toggle('isShown');
+    menuNav.classList.toggle('isShown');
+    NavItems.forEach(item => item.classList.toggle('isShown'));
 });
 
 
