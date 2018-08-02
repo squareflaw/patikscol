@@ -1,18 +1,17 @@
-header.header 
-    .main-logo
-      img(src=logo, alt="Main logo" href="./index.html")
-    .title
-      p.websiteName Patiks
+header(itemscope itemtype="https://schema.org/WPHeader").header
+    .website(itemscope itemtype="https://schema.org/Organization") 
+      .main-logo
+        a(href="/" itemprop="url")
+          img(src=logo, alt="Main logo" href="./index.html")
+      .title
+        h2(itemprop="name").websiteName Patiks
     .menu-btn
       .menu-btn__line
       .menu-btn__line
       .menu-btn__line
-    nav.menu
+    nav(itemscope itemtype="https://schema.org/SiteNavigationElement" role="navigation").menu
       ul.menu-nav
         li.menu-nav__item.isCurrent: a(href="./").menu-nav__item__link Home
         li.menu-nav__item: a(href="#").menu-nav__item__link Mascotas
         li.menu-nav__item: a(href="#").menu-nav__item__link Blog
-        li.menu-nav__item: a(href="#").menu-nav__item__link Hogares encontrados
         li.menu-nav__item: a(href="#").menu-nav__item__link Sobre nosotros
-        li.menu-nav__item: a(href="#").menu-nav__item__link Eventos
-        li.menu-nav__item: a(href="#").menu-nav__item__link ¿Quieres ser parte?

@@ -9,7 +9,6 @@ html(lang="es")
     meta(name="viewport" content="initial-scale=1.0, width=device-width")
     meta(name="description" content= description)
     link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans")
-    // link(href="https://file.myfontastic.com/zKXDvy8Nub3UzMaVbdbSTe/icons.css" rel="stylesheet")
     link(rel="stylesheet" href="css/styles.css")
     link(rel="shortcut icon" href="./img/favicon.png")
 
@@ -19,25 +18,18 @@ html(lang="es")
     meta(property="og:type" content="website")
     meta(property="og:description" content= description)
     meta(property="og:url" content= ogUrl)
-    meta(property="og:image" content="./img/website-poster.jpg")
-    meta(property="og:site_name" content="Website name")
+    meta(property="og:image" content="./img/banner-trans.png")
+    meta(property="og:site_name" content="Patiks | Adopta una mascota")
     meta(property="og:locale" content="es_VE")
     meta(property="og:locale:alternate" content="es_CO")
     meta(property="og:locale:alternate" content="es_MX")
     meta(property="og:locale:alternate" content="es_DO")
     meta(property="og:locale:alternate" content="es_BO")
 
-
-    //- Twitter Cards
-    meta(property="twitter:card" content="summary_large_image")
-    meta(property="twitter:title" content= title)
-    meta(property="twitter:site" content="@websiteAccount")
-    meta(property="twitter:description" content=description)
-    meta(name="twitter:image" content="./img/website-poster.jpg")
     meta(name="theme-color" content=webTheme)
 
 
-  body(itemscope itemtype="http://schema.org/WebPage")
+  body(itemscope itemtype="https://schema.org/WebPage")
     include ../includes/header
     block main
     include ../includes/footer

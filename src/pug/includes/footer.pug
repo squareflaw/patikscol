@@ -1,6 +1,14 @@
-footer 
-  .credits
-    .credits__year
+footer(role="contentinfo" itemscope itemtype="https://schema.org/WPFooter").footer
+    .footer__nav
+      a(href="#") Home
+      a(href="#") Mascotas
+      a(href="#") Blog
+    .footer__year
       p &copy 2018 
-    .credits__web-developer
-      a(href="https://instagram.com/squareflaw" target="_blank") Albin Garcia
+    .footer__web-developer
+      p Hecho por #[a(href="https://instagram.com/squareflaw" target="_blank") Albin Garcia]
+      p repositorio de este sitio en  #[a(href="https://github.com/squareflaw/patikscol" target="_blank") Github]
+    .footer__icons
+      a(href="https://github.com/squareflaw" target="_blank").icon: img(src="./img/github-logo-2.svg", alt="Github logo")
+      a(href="https://instagram.com/squareflaw" target="_blank").icon: img(src="./img/instagram-logo-color.svg", alt="instagram logo")
+      a(href="https://twitter.com/squareflaw" target="_blank").icon: img(src="./img/twitter-logo-color.svg", alt="Twitter logo")
