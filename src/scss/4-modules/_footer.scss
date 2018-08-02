@@ -1,0 +1,16 @@
+footer {
+  background: $primary-color;
+  color: $full-white;
+
+  .credits {
+    display: flex;
+    
+    *{
+      margin: 5px;
+      display: block;
+    }
+    &__web-developer > a:hover {
+      color: $secundary-color;
+    }
+  }
+}

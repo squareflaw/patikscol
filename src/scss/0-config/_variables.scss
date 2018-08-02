@@ -33,12 +33,13 @@ $navy: 			#000080;
 
 // $custom-primary-color: hsl(180,100%,40%);
 $palette-color-1: #F7C882;
-$palette-color-2: #ba4c20; 
+$palette-color-2: #f19e22;
+$palette-color-3: #ba4c20; 
 
 
 
-$primary-color:		$palette-color-1;
-$secundary-color:	$palette-color-2;
+$primary-color:		$palette-color-2;
+$secundary-color:	$palette-color-3;
 $important-color:	$blue;
 $link-color:		$blue;
 
@@ -60,7 +61,7 @@ $max-font-size: 22;
 $min-screen-size: 320;
 $max-screen-size: 1330;
 	
-$font-family-display: 'Lato' 'verdana',san serif;
+$font-family-display: 'Lobster', serif;;
 $font-family-default: 'Open sans'san serif;
 
 

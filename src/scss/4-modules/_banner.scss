@@ -1,0 +1,22 @@
+.banner {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex-flow: column wrap;
+
+  &__text {
+    margin: 10vw;
+    font-size: 2.2rem;
+
+    span {
+      color: $secundary-color;
+      font-family: $font-family-display;
+    }
+  }
+
+
+  &__img{
+    align-self: flex-end;
+  }
+}

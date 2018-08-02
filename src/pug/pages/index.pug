@@ -13,11 +13,31 @@ append config
   -botonClass= ""
   -botonUrl=""
   -botonIco= ""
-  -botonText =""
+  -botonText ="" 
   -botones = "si"
  
      
  
 block main
-  main.main
+  main#main
+    section.banner
+      p.banner__text El #[span amor] no se puede comprar, pero se puede #[span rescatar.]
+      img(srcset="./img/dog-trans.png 578w, ./img/dog-trans-M.png 768w, ./img/dog-trans-L.png 1024w, ./img/dog-trans-Xl.png 1366w"
+          src="./img/banner-img.jpg" alt="Dog kissing a woman").banner__img
+  
+    section.illustrations
+      .illustrations__item
+        img(src="./img/womanAndPetShape.svg", alt="Woman and her pet")
+        p.title ¿Por que adoptar?
+        p Encontrarás a un amigo fiel y cariñoso cada vez que entres por la puerta.  
+      .illustrations__item
+        img(src="./img/bulldogShape.svg", alt="Bulldog")
+        p.title ¡No compres!
+        p Mientras muchos compran mascotas, otras mueren en la calle. No compres, adopta uno sin casa.    
+      .illustrations__item
+        img(src="./img/dog-airplaneShape.svg", alt="Dog watching and airplane take off")
+        p.title ¿Te vas del pais?
+        p Nosotros te ayudamos a dar a tu mascota en adopción.¡No la abandones!  
+ 
+  
       
