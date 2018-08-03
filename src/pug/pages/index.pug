@@ -4,17 +4,6 @@ append config
   -headTitle = "Patiks" 
   -description = "Sitio web en el que puedes adopar a una mascota o Buscarle un nuevo hogar a la tuya."
   -ogUrl = "/index.html"
-
-  -img = "images/home-banner.jpg"
-  -titleBanner = "title Banner"
-  -Bannerdescription = "Banner description"
-  -clase = ""
-  -boton = ""
-  -botonClass= ""
-  -botonUrl=""
-  -botonIco= ""
-  -botonText ="" 
-  -botones = "si"
  
      
  
@@ -42,89 +31,122 @@ block main
       .illustrations__item
         img(src="./img/dog-airplaneShape.svg", alt="Dog watching and airplane take off")
         p.title ¿Te vas del pais?
-        p.content Nosotros te ayudamos a dar a tu mascota en adopción.¡No la abandones!  
+        p.content Nosotros te ayudamos a dar a tu mascota en adopción.¡No la abandones!
+      
 
+    
+    section.section.section-pets
+      .section-title
+        h4.title Mascotas
+        img(src="./img/pawprints.svg", alt="pawn prints logo")
+      .cards.cards-pets
+        .card.card-pet
+          img(src="./img/Ruby.jpg", alt="Pet image").card__img
+          h3.card__title.card-pet__title Ruby
+          div
+            p.card-pet__age 8 meses
+            details
+              summary.card__button Ver info
+              p Esta preciosa nena espera por un hogar definitivo😍🏡.Ya desparasitada y esterilizada💉👀. Para mayor información comunicarse con Yuraima al +58 424-6139173 📲 Cabimas - Zulia📍
 
-    section.site-goal
-      p Sitio dedicado a educar, informar y fomentar la adopción para así concienciar a la población sobre la tenencia responsable de un animal🐾. Estamos ubicados en Cabimas - Venezuela
+        .card.card-pet
+          img(src="./img/Rocky.jpg", alt="Pet image").card__img
+          h3.card__title.card-pet__title Rocky
+          div
+            p.card-pet__age 5 meses
+            details
+              summary.card__button Ver info
+              p Hermoso cachorro en adopción🐾🐶 Para más información comunicarse con Yuraima al +58 424-6139173 😃😃.
 
+        .card.card-pet
+          img(src="./img/Mili.jpg", alt="Pet image").card__img
+          h3.card__title.card-pet__title Mili
+          div
+            p.card-pet__age 2 meses
+            details
+              summary.card__button Ver info
+              p Hermosa gatita en adopción🐾🐈 Para más información comunicarse con Renata al +584246899357😃❤️ 📲 (Cabimas-Zulia).
 
-    section.cards-pets
-      h4.section-title Mascotas
-      img(src="./img/pawprints.svg", alt="pawn prints logo")
-
-      .card-pet
-        img(src="./img/Ruby.jpg", alt="Pet image").card-pet__img
-        h3.card-pet__title Ruby
-        p.card-pet__age 8 meses
-        a(href="#").card-pet__button Ver
-
-      .card-pet
-        img(src="./img/Rocky.jpg", alt="Pet image").card-pet__img
-        h3.card-pet__title Rocky
-        p.card-pet__age 5 meses
-        a(href="#").card-pet__button Ver
-
-      .card-pet
-        img(src="./img/Mili.jpg", alt="Pet image").card-pet__img
-        h3.card-pet__title Mili
-        p.card-pet__age 2 meses
-        a(href="#").card-pet__button Ver
-
-      a(href="#").button-all Ver todas
+      p.see-all: a(href="./pets.html").button-all Ver todas
   
       
 
 
 
 
-    section(itemscope itemtype="https://schema.org/Blog").cards-blog
-      h4.section-title Blogs destacados
+    section(itemscope itemtype="https://schema.org/Blog").section.section-blog
+      .section-title
+        h4.title Blogs Destacados
+        img(src="./img/blog-icon.svg", alt="pawn prints logo")
 
-      article(itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting").card-blog
-        img(src="./img/banner-trans.png" itemprop="image" itemscope itemtype="https://schema.org/ImageObject" alt="blog image" href="#").card-blog__img
-        h2(itemprop="name headline").card-blog__title: a(href="#") ¿Cuáles son las ventajas de adoptar una mascota?
-        p(itemprop="description").card-blog__content  la oportunidad de cambiar no solo una, sino la vida de dos perros, el que decides adoptar y el callejero que va a ocupar el puesto que deja el perro que tú te llevas.
-        time(datetime="2018-04-10T10:43:39Z" itemprop="datePublished").card-blog__date 10 de Abrild 2018
+      .cards
+        article(itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting").card
 
+          img(src="./img/banner-trans.png" itemprop="image" itemscope itemtype="https://schema.org/ImageObject" alt="blog image" ).card__img
 
-      article(itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting").card-blog
-        img(src="./img/dog-airplaneShape.svg" itemprop="image" itemscope itemtype="https://schema.org/ImageObject" alt="blog image").card-blog__img
-        h2(itemprop="name headline").card-blog__title: a(href="#") Mis dueños se van del pais
-        p(itemprop="description").card-blog__content  El incremento de abandono de perros y gatos está también relacionado con el aumento de la emigración venezolana.
-        time(datetime="2018-04-4T10:43:39Z" itemprop="datePublished").card-blog__date 4 de Abril 2018
+          h2(itemprop="name headline").card__title: a(href="#") ¿Cuáles son las ventajas de adoptar una mascota?
 
+          p(itemprop="description").card__content  la oportunidad de cambiar no solo una, sino la vida de dos perros, el que decides adoptar y el callejero que va a ocupar el puesto que deja el perro que tú te llevas.
 
-      article(itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting").card-blog
-        img(src="./img/eating.jpeg" itemprop="image" itemscope itemtype="https://schema.org/ImageObject" alt="blog image").card-blog__img
-        h2(itemprop="name headline").card-blog__title: a(href="#") ¿Cuántas veces al dia debo darle comida a mi perro?
-        p(itemprop="description").card-blog__content  La cantidad de veces que un perro come al día depende de su edad y condición de salud.
-        time(datetime="2018-01-22T10:43:39Z" itemprop="datePublished").card-blog__date 22 de Enero 2018
-
-      a(href="#").button-all Ir al blog
+          time(datetime="2018-04-10T10:43:39Z" itemprop="datePublished").card-blog__date 10 de Abrild 2018
 
 
-    section.success-cases
-      h4.section-title Hogares encontrados
-      .success-case__post
-        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/BlwR02zByNc/?utm_source=ig_embed" data-instgrm-version="9" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/BlwR02zByNc/?utm_source=ig_embed" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">Esta cuchitura fue adoptada por la Familia Quiroz 🌸💖 Gragias por aceptarla😃 Trabajemos juntos para regalar segundas oportunidades. Tantas mascotas sin hogar, haz la diferencia. ADOPTA, NO COMPRES🐾🐕❤️</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">Una publicación compartida de <a href="https://www.instagram.com/patikscol/?utm_source=ig_embed" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px;" target="_blank"> PatiKsCOL</a> (@patikscol) el <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2018-07-27T23:57:08+00:00">27 Jul, 2018 a las 4:57 PDT</time></p></div></blockquote> <script async defer src="//www.instagram.com/embed.js"></script>
-      p Puedes ver todos los hogares encontrados #[a(href="https://instagram.com/patikscol") Aquí]
+
+
+        article(itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting").card
+
+          img(src="./img/dog-airplaneShape.svg" itemprop="image" itemscope itemtype="https://schema.org/ImageObject" alt="blog image").card__img
+
+          h2(itemprop="name headline").card__title: a(href="#") Mis dueños se van del pais
+
+          p(itemprop="description").card__content  El incremento de abandono de perros y gatos está también relacionado con el aumento de la emigración venezolana.
+
+          time(datetime="2018-04-4T10:43:39Z" itemprop="datePublished").card-blog__date 4 de Abril 2018
+
+
+
+
+        article(itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting").card
+
+          img(src="./img/eating.jpeg" itemprop="image" itemscope itemtype="https://schema.org/ImageObject" alt="blog image").card__img
+
+          h2(itemprop="name headline").card__title: a(href="#") ¿Cuántas veces al dia debo darle comida a mi perro?
+
+          p(itemprop="description").card__content  La cantidad de veces que un perro come al día depende de su edad y condición de salud.
+
+          time(datetime="2018-01-22T10:43:39Z" itemprop="datePublished").card-blog__date 22 de Enero 2018
+
+      p.see-all: a(href="./blog.html").button-all Ir al blog
+
+
+    section.section.section-insta
+      .section-title
+        h4.title Hogares encontrados
+        img(src="./img/heartbeat-icon.svg" alt="pawn prints logo")
+      .cards.cards-insta
+        .card-insta
+          <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/BlwR02zByNc/?utm_source=ig_embed" data-instgrm-version="9" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/BlwR02zByNc/?utm_source=ig_embed" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">Esta cuchitura fue adoptada por la Familia Quiroz 🌸💖 Gragias por aceptarla😃 Trabajemos juntos para regalar segundas oportunidades. Tantas mascotas sin hogar, haz la diferencia. ADOPTA, NO COMPRES🐾🐕❤️</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">Una publicación compartida de <a href="https://www.instagram.com/patikscol/?utm_source=ig_embed" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px;" target="_blank"> PatiKsCOL</a> (@patikscol) el <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2018-07-27T23:57:08+00:00">27 Jul, 2018 a las 4:57 PDT</time></p></div></blockquote> 
+        
+
+
+        .card-insta
+          <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/BkxssABHht5/?utm_source=ig_embed" data-instgrm-version="9" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/BkxssABHht5/?utm_source=ig_embed" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">Este pequeñín ya tiene nuevo hogar 😃🐕 Gracias a la familia Figueroa por aceptarlo como nuevo miembro🙏❤️</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">Una publicación compartida de <a href="https://www.instagram.com/patikscol/?utm_source=ig_embed" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px;" target="_blank"> PatiKsCOL</a> (@patikscol) el <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2018-07-03T16:39:42+00:00">3 Jul, 2018 a las 9:39 PDT</time></p></div></blockquote> <script async defer src="//www.instagram.com/embed.js"></script>
+      p.see-all Puedes ver todos los hogares encontrados en nuestra cuenta de Instagram #[a(href="https://instagram.com/patikscol" target="_blank").insta-link @patikscol]
       
 
 
 
-    section.about
-      h4.section-title Sobre nosotros
+    section.section.section-about
+      .section-title
+        h4.title Sobre nosotros
+        img(src="./img/group-icon.svg" alt="pawn prints logo")
       img(src="./img/us.jpg" alt="Photo with all the members of the organization")
 
-      p Patikscol es un grupo de voluntarios cuyo amor por los animales va mas alla de cualquier cosa. Gracias a la colaboracion de todos esto se hizo  posible, todos llevan una parte del crédito y Esperamos que esta familia siga creciendo, teniendo siempre presente que esto siempre será por ellos y para ellos. Gracias infinitas por tanto apoyo, solo juntos podremos lograr ese cambio que tanto deseamos ver en nuestro hermoso país.
-      img(src=logo, alt="Main logo") 
+      p Somos una organizacion sin fines de lucro dedicada a educar, informar y fomentar la adopción para así concienciar a la población sobre la tenencia responsable de un animal🐾. 
+
+      p.see-all: a(href="./about.html").button-all Mas sobre nosotros
 
 
-    section.join
-      p Para ver todos los hogares encontrados, futuros eventos y mucho mas siguenos en instagram #[a(href="https://instagram.com/patikscol") @patikscol]
-
-      p Si quieres saber como puedes colaborar o convertirte en voluntario no dudes en escribirnos a nuestra cuenta. Ayudanos a rescatar y buscar un nuevo hogar para estas hermosas criaturas
-
+    
   
       

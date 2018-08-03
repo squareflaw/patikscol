@@ -1,13 +1,13 @@
 .banner {
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  flex-flow: column wrap;
+  flex-flow: column no-wrap;
 
   &__text {
-    margin: 10vw;
-    font-size: 2.2rem;
+    margin: 0 10vw;
+    font-size: 2rem;
 
     span {
       color: $secundary-color;

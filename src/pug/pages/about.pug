@@ -1,0 +1,24 @@
+extends ../config/template
+append config
+  -headTitle = "Patiks | Sobre nosotros"
+  -description = "Somos una organizacion sin fines de lucro dedicada a educar, informar y fomentar la adopción para así concienciar a la población sobre la tenencia responsable de un animal."
+  -ogUrl= "/about.html"
+
+block main
+  main(itemscope itemprop="mainContentOfPage" role="main")
+    section.section.section-about
+      .section-title
+        h4.title Sobre nosotros
+        img(src="./img/group-icon.svg", alt="pawn prints logo")
+      img(src="./img/us.jpg" alt="Photo with all the members of the organization")
+      
+      p Patikscol es un grupo de voluntarios cuyo amor por los animales va mas alla de cualquier cosa.
+
+      p Somos una organizacion sin fines de lucro ubicada en Cabimas - Venezuela. Dedicada a educar, informar y fomentar la adopción para así concienciar a la población sobre la tenencia responsable de un animal🐾.
+
+
+      p Gracias a la colaboracion de todos esto se hizo  posible, todos llevan una parte del crédito y Esperamos que esta familia siga creciendo, teniendo siempre presente que esto siempre será por ellos y para ellos.
+
+      p Gracias infinitas por tanto apoyo, solo juntos podremos lograr ese cambio que tanto deseamos ver en nuestro hermoso país.
+
+      img(src=logo, alt="Main logo")

@@ -38,10 +38,7 @@ Menu dropdown
 .menu.isShown {
   transform: translate(0,0);
   @include transition;
-  transition-duration: 1s;
+  transition-duration: 0.5s;
 }
 
 
-.menu-nav__item.isCurrent {
-  color: $secundary-color;
-}

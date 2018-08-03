@@ -1,27 +1,32 @@
 .header {
-  min-width: 100%;
+  min-width: 100vw;
   position: fixed;
+  top: 0;
   z-index: 4;
-  display: flex;
-  align-items: center;
+
+  // display: none;
 
   background: transparent;
   color: $secundary-color;
 
   @include transition;
+  
+  .website{      
+    display: flex;
+    align-items: center;
+    
+    .main-logo {
+      width: 6vh;
+      height: 6vh;
+      margin: 5px 1rem;
+    }
 
-  .main-logo {
-    width: 6vh;
-    height: 6vh;
-    margin: 5px 1rem;
+    .websiteName {
+      font-family: $font-family-display;
+      font-size: 2rem;
+      margin: 0;
+    }
   }
-
-  .websiteName {
-    font-family: $font-family-display;
-    font-size: 2rem;
-    margin: 0;
-  }
-
 }
 
 .menu-btn {
