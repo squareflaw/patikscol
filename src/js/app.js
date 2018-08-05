@@ -7,6 +7,9 @@ const menu = document.querySelector('.menu');
 const menuNav = document.querySelector('.menu-nav');
 const NavItems = document.querySelectorAll('.menu-nav__item');
 
+const seeInfoBtn = document.querySelectorAll('.seeInfoBtn');
+// let   isInfoBtnOpen = false;
+
 
 
 menuBtn.addEventListener('click', function(e) {    
@@ -27,6 +30,21 @@ window.addEventListener('scroll', function(e) {
       menuBtn.classList.add('scroll');
     }
 });
+
+
+seeInfoBtn.forEach(item =>
+  
+  item.addEventListener('click', function(e) {
+    
+    item.classList.toggle('isClicked');
+
+    if (item.innerHTML == 'Ver info') {
+      item.innerHTML = 'Ocultar';      
+    }else {
+      item.innerHTML = 'Ver info';            
+    }    
+}));
+
 
 
 })();

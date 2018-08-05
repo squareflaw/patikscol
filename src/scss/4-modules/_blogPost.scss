@@ -1,0 +1,30 @@
+.blogPost {
+  max-width: 800px;
+  margin: auto;
+  padding-top: 15vh;
+  background: $full-white;
+
+  
+  &__title,
+  &__date,
+  &__caption,
+  &__body {
+    padding: 5px 20px;
+  }
+
+  &__date,
+  &__caption {
+    color: hsl(0,0%,60%);
+  }
+
+  &__title {
+    font-size: 1.8rem;
+  }
+
+  &__caption {
+    text-align: center;
+    a {
+      text-decoration: underline;
+    }
+  }
+}

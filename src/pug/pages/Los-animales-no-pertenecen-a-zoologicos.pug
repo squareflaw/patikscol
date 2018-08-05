@@ -1,0 +1,33 @@
+extends ../config/template
+append config
+  -var blogPostTitle = "Los animales no pertenecen a zoologicos";
+  -headTitle = blogPostTitle + " | Patiks.com";
+
+  -description = "Los animales que viven en cautividad, con independencia de si han nacido en cautiverio o en estado salvaje, presentan una serie de trastornos como estrés, tristeza, inapetencia, claustrofobia, etc. que se englobarían en una patología denominada Zoocosis.";
+
+  -var date = "16 de julio del 2018";
+  -var dateTimeMeta = "2018-07-16T10:43:39Z";
+
+  -var imgUrl = "./img/zoo.jpeg";
+  -var imgAlt = "Sad animal in a cage"
+
+  // by default the image source is pexels
+  -var imgAuthor = "Tina Nord";
+  -var imgAuthorUrl = "https://www.pexels.com/@nord6";
+
+  -ogUrl= "/Los-animales-no-pertenecen-a-zoologicos.html";
+
+
+block main 
+  main(itemscope itemprop="mainContentOfPage" role="main")
+    section(itemscope itemtype="https://schema.org/Blog").section.blogPost
+      article(itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting")
+        meta(itemprop="mainEntityOfPage" content="./zoo.html")
+        h1(itemprop="name headline").blogPost__title=blogPostTitle
+        p.blogPost__date: time(datetime=dateTimeMeta itemprop="datePublished")=date 
+        figure(itemprop="image" itemscope itemtype="https://schema.org/ImageObject")
+          img(itemprop="url" alt=imgAlt src=imgUrl).blogPost__img
+          figcaption(itemprop="caption").blogPost__caption Photo by #[a(href=imgAuthorUrl target="_blank")=imgAuthor ] from #[a(href="https://www.pexels.com" target="_blank") Pexels].
+        .blogPost__body(itemprop="articleBody")
+
+          include:markdown-it(html) ../../blogPosts/Un-propietario-irresponsable-es-mas-peligroso-que-un-animal-potencialmente-peligroso.md

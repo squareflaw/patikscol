@@ -47,6 +47,7 @@
     color: $full-white;
 
     border-radius: 10px;
+    @include transition;
     
     &:hover {
       cursor: pointer;
