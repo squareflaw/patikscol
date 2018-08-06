@@ -3,13 +3,12 @@
   position: fixed;
   top: 0;
   z-index: 4;
-
-  // display: none;
-
   background: transparent;
   color: $secundary-color;
 
   @include transition;
+
+
   
   .website{      
     display: flex;
@@ -28,15 +27,39 @@
       margin: 0;
     }
   }
+
+  @include media($large-min){
+    height: auto;
+    // width: 100vw;
+    z-index: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5vw; 
+
+    .website {
+      // display: inline;
+    }
+  }
 }
+
+
+
+
+
+
+
+
+
 
 .menu-btn {
   position: fixed;
-  top: 1.5vh;
-  right: 1.5vh;
+  top: 2vh;
+  right: 2vh;
   z-index: 5;
   cursor: pointer;
   @include transition;
+
 
   &__line {
     width: 40px;
@@ -46,6 +69,9 @@
     @include transition;
   }
   
+  @include media($large-min){
+    display: none;
+  }
 }
 
 

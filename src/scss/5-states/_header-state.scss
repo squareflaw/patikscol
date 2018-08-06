@@ -4,6 +4,12 @@
   color: $full-white;
   box-shadow: 0 1px 1px 1px hsla(0,100%,0%,0.25);
   @include transition;
+
+  @include media($large-min){
+    .menu {
+      color: $full-white;
+    }
+  }
 }
 
 .header.isShown {

@@ -11,7 +11,7 @@
     max-width: 400px;
     margin: 0 10vw;
     margin-bottom: 5vh;
-    font-size: 2rem;
+    font-size: 1.8rem;
     align-self: flex-end;
 
 
@@ -28,7 +28,22 @@
 
 
   &__img{
-    flex: 0 0 auto;
     max-width: 500px;
+  }
+
+
+  
+  @include media($medium-min){
+    flex-direction: row-reverse;
+
+    &__img {
+      max-height: 50vh;
+      align-self: flex-end;
+    }
+
+    &__text {
+      align-self: center;
+      margin: 0 5vw;
+    }
   }
 }
