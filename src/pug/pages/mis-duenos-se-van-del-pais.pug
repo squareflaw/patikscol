@@ -1,0 +1,9 @@
+extends ../includes/blogPostTemplate
+append config
+  -var post = posts[8];  
+  -headTitle = post.blogPostTitle + " | Patiks.com"; 
+
+
+block blogPostUrl
+  include:markdown-it(html) ../../blogPosts/ventajas-de-adoptar-una-mascota.md     
+  include:markdown-it(html) ../../blogPosts/mis-duenos-se-van-del-pais.md     

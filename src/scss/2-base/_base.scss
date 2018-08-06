@@ -30,7 +30,7 @@ a {
   color: inherit;
   text-decoration: none;
   &:hover {
-    color: $primary-color;
+    color: $secundary-color;
   }
 }
 
@@ -45,8 +45,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $font-family-display;
-  font-weight: normal;
+  font-family: $font-family-default;
   margin: 0;
   padding: 0;
 }

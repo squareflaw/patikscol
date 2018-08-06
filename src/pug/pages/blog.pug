@@ -1,4 +1,5 @@
 extends ../config/template
+include ../includes/card-blogPost
 append config
   -headTitle = "Patiks | Blog"
   -description = "blog dedicado a educar, informar y fomentar la adopción para así concienciar a la población sobre la tenencia responsable de un animal."
@@ -12,63 +13,5 @@ block main
         img(src="./img/blog-icon.svg", alt="notebook logo")
 
       .cards
-        article(itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting").card
-
-          a(href="./Los-animales-no-pertenecen-a-zoologicos.html"): img(src="./img/zoo.jpeg" itemprop="image" itemscope itemtype="https://schema.org/ImageObject" alt="blog image" ).card__img
-
-          h2(itemprop="name headline").card__title: a(href="./Los-animales-no-pertenecen-a-zoologicos.html") Los animales no pertenecen a los zoológicos
-
-          p(itemprop="description").card__content  Los animales que viven en cautividad, con independencia de si han nacido en cautiverio o en estado salvaje, presentan una serie de trastornos como estrés, tristeza, inapetencia y muchos más.
-
-          time(datetime="2018-04-10T10:43:39Z" itemprop="datePublished").card-blog__date 16 de Julio de 2018
-
-
-          
-        
-        article(itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting").card
-
-          a(href="./Un-propietario-irresponsable-es-mas-peligroso-que-un-animal-potencialmente-peligroso.html"): img(src="./img/pitbull.jpeg" itemprop="image" itemscope itemtype="https://schema.org/ImageObject" alt="blog image" ).card__img
-
-          h2(itemprop="name headline").card__title: a(href="./Un-propietario-irresponsable-es-mas-peligroso-que-un-animal-potencialmente-peligroso.html") Un propietario irresponsable es mas peligroso que un animal potencialmente peligroso
-
-          p(itemprop="description").card__content  El factor “agresividad” puede darse en cualquier raza. Cualquier perro, sea del tamaño o raza que sea, puede tener algún tipo de miedo que le provocan agresividad.
-
-          time(datetime="2018-04-10T10:43:39Z" itemprop="datePublished").card-blog__date 12 de Julio de 2018
-
-
-          
-        article(itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting").card
-
-          img(src="./img/banner-trans.png" itemprop="image" itemscope itemtype="https://schema.org/ImageObject" alt="blog image" ).card__img
-
-          h2(itemprop="name headline").card__title: a(href="#") ¿Cuáles son las ventajas de adoptar una mascota?
-
-          p(itemprop="description").card__content  la oportunidad de cambiar no solo una, sino la vida de dos perros, el que decides adoptar y el callejero que va a ocupar el puesto que deja el perro que tú te llevas.
-
-          time(datetime="2018-04-10T10:43:39Z" itemprop="datePublished").card-blog__date 10 de Abrild 2018
-
-
-
-
-        article(itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting").card
-
-          img(src="./img/dog-airplaneShape.svg" itemprop="image" itemscope itemtype="https://schema.org/ImageObject" alt="blog image").card__img
-
-          h2(itemprop="name headline").card__title: a(href="#") Mis dueños se van del pais
-
-          p(itemprop="description").card__content  El incremento de abandono de perros y gatos está también relacionado con el aumento de la emigración venezolana.
-
-          time(datetime="2018-04-4T10:43:39Z" itemprop="datePublished").card-blog__date 4 de Abril 2018
-
-
-
-
-        article(itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting").card
-
-          img(src="./img/eating.jpeg" itemprop="image" itemscope itemtype="https://schema.org/ImageObject" alt="blog image").card__img
-
-          h2(itemprop="name headline").card__title: a(href="#") ¿Cuántas veces al dia debo darle comida a mi perro?
-
-          p(itemprop="description").card__content  La cantidad de veces que un perro come al día depende de su edad y condición de salud.
-
-          time(datetime="2018-01-22T10:43:39Z" itemprop="datePublished").card-blog__date 22 de Enero 2018
+        -for(var i = 0; i < posts.length ; i++)
+          +card-blogPost(posts[i])

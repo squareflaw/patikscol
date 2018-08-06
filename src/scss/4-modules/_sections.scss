@@ -14,10 +14,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
     background: $full-white;
 
+
     .title {
+      font-family: $font-family-display;
       font-size: 30px;
+      font-weight: normal;
     }
     
     img {

@@ -59,7 +59,9 @@
 
 .card-pet {
   &__title {
+    font-family: $font-family-display;
     font-size: 2.5rem;
+    font-weight: normal;
   }
 
   div {

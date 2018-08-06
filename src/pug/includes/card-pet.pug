@@ -1,0 +1,9 @@
+mixin card-pet(pet)
+  .card.card-pet
+    img(src=pet.imgUrl, alt="Pet image").card__img
+    h3.card__title.card-pet__title= pet.name
+    div
+      p.card-pet__age= pet.age
+      details
+        summary.card__button.seeInfoBtn Ver info
+        p= pet.details

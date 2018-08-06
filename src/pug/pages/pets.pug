@@ -1,4 +1,5 @@
 extends ../config/template
+include ../includes/card-pet
 append config
   -headTitle = "Patiks | Mascotas"
   -description = "Adopta una mascota y dale un nuevo hogar a un hermoso compañero."
@@ -11,74 +12,5 @@ block main
         h4.title Mascotas
         img(src="./img/pawprints.svg", alt="pawn prints logo")
       .cards.cards-pets
-        .card.card-pet
-          img(src="./img/Ruby.jpg", alt="Pet image").card__img
-          h3.card__title.card-pet__title Ruby
-          div
-            p.card-pet__age 8 meses
-            details
-              summary.card__button.seeInfoBtn Ver info
-              p Esta preciosa nena espera por un hogar definitivo😍🏡.Ya desparasitada y esterilizada💉👀. Para mayor información comunicarse con Yuraima al +58 424-6139173 📲 Cabimas - Zulia📍
-
-        .card.card-pet
-          img(src="./img/Rocky.jpg", alt="Pet image").card__img
-          h3.card__title.card-pet__title Rocky
-          div
-            p.card-pet__age 5 meses
-            details
-              summary.card__button.seeInfoBtn Ver info
-              p Hermoso cachorro en adopción🐾🐶 Para más información comunicarse con Yuraima al +58 424-6139173 😃😃.
-
-        .card.card-pet
-          img(src="./img/Mili.jpg", alt="Pet image").card__img
-          h3.card__title.card-pet__title Mili
-          div
-            p.card-pet__age 2 meses
-            details
-              summary.card__button.seeInfoBtn Ver info
-              p Hermosa gatita en adopción🐾🐈 Para más información comunicarse con Renata al +584246899357😃❤️ 📲 (Cabimas-Zulia).
-
-        .card.card-pet
-          img(src="./img/Zeus.jpg", alt="Pet image").card__img
-          h3.card__title.card-pet__title Zeus
-          div
-            p.card-pet__age 7 meses
-            details
-              summary.card__button.seeInfoBtn Ver info
-              p Este bebé fue rescatado en la plaza de las 50 (Cabimas-Zulia). Se busca hogar definitivo o temporal. Su rescatista se hará cargo de las vacunas y también de su esterilización. Para mayor información comunicarse al +584120745878 📲.
-
-        .card.card-pet
-          img(src="./img/bella.jpg", alt="Pet image").card__img
-          h3.card__title.card-pet__title Bella
-          div
-            p.card-pet__age 3 meses
-            details
-              summary.card__button.seeInfoBtn Ver info
-              p Gatita de aproximadamente 3 meses en adopción 🐈🐾 Para más información comunicarse con Soraida al +58 412-6822229 😃❤️ (Cabimas).
-
-        .card.card-pet
-          img(src="./img/Jade.jpg", alt="Pet image").card__img
-          h3.card__title.card-pet__title Jade
-          div
-            p.card-pet__age 4 meses
-            details
-              summary.card__button.seeInfoBtn Ver info
-              p Hermosa nena de 4 meses busca un hogar definitivo🏡 Ya desparasitada💉 Para mayor información comunicarseal +58 412-0679993 📲Cabimas - Zulia📍
-
-        .card.card-pet
-          img(src="./img/Miedica.jpg", alt="Pet image").card__img
-          h3.card__title.card-pet__title Miedica
-          div
-            p.card-pet__age 6 meses
-            details
-              summary.card__button.seeInfoBtn Ver info
-              p 🌸 Hermosa cachorra de 6 meses en adopción 🐶🐾 Tiene TODAS sus vacunas (se entregan los certificados). Para mayor información comunicarse con Renata al +584246899357😃❤️ Cabimas - Zulia. 
-
-        .card.card-pet
-          img(src="./img/Nana.jpg", alt="Pet image").card__img
-          h3.card__title.card-pet__title Nana
-          div
-            p.card-pet__age 6 meses
-            details
-              summary.card__button.seeInfoBtn Ver info
-              p Hermosa de 6 meses en adopción🌻💗 Desparasitada y con todas sus vacunas (se entrega con los certificados) y pronto será esterilizada🐾🐕. Para mayor información comunicarse al +584246899357 😃 
+        -for(var i = 0; i < pets.length ; i++)
+          +card-pet(pets[i])  

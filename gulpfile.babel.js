@@ -66,9 +66,9 @@ gulp.task('styles', () =>
 gulp.task('pug', () =>
   gulp.src('./src/pug/pages/*.pug')
     .pipe(plumber({errorHandler: onError}))
-    // .pipe(data(function(file) {
-    //   return JSON.parse(fs.readFileSync('./src/data/casos-de-exito.json'))
-    // }))
+    .pipe(data(function(file) {
+      return JSON.parse(fs.readFileSync('./src/data/posts.json'))
+    }))
     .pipe(pug())
     .pipe(gulp.dest('./public'))
     .pipe(reload({stream:true}))

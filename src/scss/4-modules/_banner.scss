@@ -1,13 +1,24 @@
 .banner {
   height: 100vh;
+  max-width: 1000px;
+  margin: auto;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
   flex-flow: column no-wrap;
+  justify-content: flex-end;
+  
 
   &__text {
+    max-width: 400px;
     margin: 0 10vw;
+    margin-bottom: 5vh;
     font-size: 2rem;
+    align-self: flex-end;
+
+
+    @include media($medium-min){
+      font-size: 2.2rem;
+      margin-bottom: 0;
+    }
 
     span {
       color: $secundary-color;
@@ -17,6 +28,7 @@
 
 
   &__img{
-    align-self: flex-end;
+    flex: 0 0 auto;
+    max-width: 500px;
   }
 }

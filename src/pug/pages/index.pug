@@ -1,4 +1,6 @@
 extends ../config/template
+include ../includes/card-pet
+include ../includes/card-blogPost
 //- include ../includes/banner
 append config
   -headTitle = "Patiks" 
@@ -13,7 +15,7 @@ block main
 
     section.banner
       p.banner__text El #[span amor] no se puede comprar, pero se puede #[span rescatar.]
-      img(srcset="./img/dog-trans.png 578w, ./img/dog-trans-M.png 768w, ./img/dog-trans-L.png 1024w, ./img/dog-trans-Xl.png 1366w"
+      img(srcset="./img/banner-trans.png 578w, ./img/banner-trans-M.png 768w, ./img/banner-trans-L.png 1024w, ./img/banner-trans-Xl.png 1366w"
           src="./img/banner-img.jpg" alt="Dog kissing a woman").banner__img
   
 
@@ -21,17 +23,20 @@ block main
 
     section.illustrations
       .illustrations__item
-        img(src="./img/womanAndPetShape.svg", alt="Woman and her pet")
-        p.title ¿Por que adoptar?
-        p.content Encontrarás a un amigo fiel y cariñoso cada vez que entres por la puerta.  
+        img(src="./img/womanAndPetShape.svg" alt="Woman and her pet")
+        div
+          p.title ¿Por que adoptar?
+          p.content Encontrarás a un amigo fiel y cariñoso cada vez que entres por la puerta.  
       .illustrations__item
         img(src="./img/bulldogShape.svg", alt="Bulldog")
-        p.title ¡No compres!
-        p.content Mientras muchos compran mascotas, otras mueren en la calle. No compres, adopta uno sin casa.    
+        div
+          p.title ¡No compres!
+          p.content Mientras muchos compran mascotas, otras mueren en la calle. No compres, adopta uno sin casa.    
       .illustrations__item
         img(src="./img/dog-airplaneShape.svg", alt="Dog watching and airplane take off")
-        p.title ¿Te vas del pais?
-        p.content Nosotros te ayudamos a dar a tu mascota en adopción.¡No la abandones!
+        div
+          p.title ¿Te vas del pais?
+          p.content Nosotros te ayudamos a dar a tu mascota en adopción.¡No la abandones!
       
 
     
@@ -40,81 +45,24 @@ block main
         h4.title Mascotas
         img(src="./img/pawprints.svg", alt="pawn prints logo")
       .cards.cards-pets
-        .card.card-pet
-          img(src="./img/Ruby.jpg", alt="Pet image").card__img
-          h3.card__title.card-pet__title Ruby
-          div
-            p.card-pet__age 8 meses
-            details
-              summary.card__button.seeInfoBtn Ver info
-              p Esta preciosa nena espera por un hogar definitivo😍🏡.Ya desparasitada y esterilizada💉👀. Para mayor información comunicarse con Yuraima al +58 424-6139173 📲 Cabimas - Zulia📍
-
-        .card.card-pet
-          img(src="./img/Rocky.jpg", alt="Pet image").card__img
-          h3.card__title.card-pet__title Rocky
-          div
-            p.card-pet__age 5 meses
-            details
-              summary.card__button.seeInfoBtn Ver info
-              p Hermoso cachorro en adopción🐾🐶 Para más información comunicarse con Yuraima al +58 424-6139173 😃😃.
-
-        .card.card-pet
-          img(src="./img/Mili.jpg", alt="Pet image").card__img
-          h3.card__title.card-pet__title Mili
-          div
-            p.card-pet__age 2 meses
-            details
-              summary.card__button.seeInfoBtn Ver info
-              p Hermosa gatita en adopción🐾🐈 Para más información comunicarse con Renata al +584246899357😃❤️ 📲 (Cabimas-Zulia).
+        -for(var i = 0; i < 3 ; i++)
+          +card-pet(pets[i])
 
       p.see-all: a(href="./pets.html").button-all Ver todas
   
       
-
+ 
 
 
 
     section(itemscope itemtype="https://schema.org/Blog").section.section-blog
       .section-title
-        h4.title Blogs Destacados
+        h4.title Blogs Recientes
         img(src="./img/blog-icon.svg", alt="pawn prints logo")
 
       .cards
-        article(itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting").card
-
-          img(src="./img/banner-trans.png" itemprop="image" itemscope itemtype="https://schema.org/ImageObject" alt="blog image" ).card__img
-
-          h2(itemprop="name headline").card__title: a(href="#") ¿Cuáles son las ventajas de adoptar una mascota?
-
-          p(itemprop="description").card__content  la oportunidad de cambiar no solo una, sino la vida de dos perros, el que decides adoptar y el callejero que va a ocupar el puesto que deja el perro que tú te llevas.
-
-          time(datetime="2018-04-10T10:43:39Z" itemprop="datePublished").card-blog__date 10 de Abrild 2018
-
-
-
-
-        article(itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting").card
-
-          img(src="./img/dog-airplaneShape.svg" itemprop="image" itemscope itemtype="https://schema.org/ImageObject" alt="blog image").card__img
-
-          h2(itemprop="name headline").card__title: a(href="#") Mis dueños se van del pais
-
-          p(itemprop="description").card__content  El incremento de abandono de perros y gatos está también relacionado con el aumento de la emigración venezolana.
-
-          time(datetime="2018-04-4T10:43:39Z" itemprop="datePublished").card-blog__date 4 de Abril 2018
-
-
-
-
-        article(itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting").card
-
-          img(src="./img/eating.jpeg" itemprop="image" itemscope itemtype="https://schema.org/ImageObject" alt="blog image").card__img
-
-          h2(itemprop="name headline").card__title: a(href="#") ¿Cuántas veces al dia debo darle comida a mi perro?
-
-          p(itemprop="description").card__content  La cantidad de veces que un perro come al día depende de su edad y condición de salud.
-
-          time(datetime="2018-01-22T10:43:39Z" itemprop="datePublished").card-blog__date 22 de Enero 2018
+        -for(var i = 0; i < 3 ; i++)
+          +card-blogPost(posts[i]) 
 
       p.see-all: a(href="./blog.html").button-all Ir al blog
 

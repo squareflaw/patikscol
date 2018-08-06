@@ -1,0 +1,17 @@
+extends ../config/template
+
+block main
+  main(itemscope itemprop="mainContentOfPage" role="main")
+    section(itemscope itemtype="https://schema.org/Blog").section.blogPost
+      article(itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting") 
+
+        h1(itemprop="name headline").blogPost__title=post.blogPostTitle
+
+        p.blogPost__date: time(datetime=post.dateTimeMeta itemprop="datePublished")=post.date
+
+        figure(itemprop="image" itemscope itemtype="https://schema.org/ImageObject")
+          img(itemprop="url" alt=post.imgAlt src=post.imgUrl).blogPost__img
+          figcaption(itemprop="caption").blogPost__caption Photo by #[a(href=post.imgAuthorUrl target="_blank")=post.imgAuthor ] from #[a(href=post.imgOriginalSourceUrl target="_blank")=post.imgOriginalSource].
+        
+        .blogPost__body(itemprop="articleBody")
+          block blogPostUrl

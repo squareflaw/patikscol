@@ -1,33 +1,8 @@
-extends ../config/template
+extends ../includes/blogPostTemplate
 append config
-  -var blogPostTitle = "Un propietario irresponsable es mas peligroso que un animal potencialmente peligroso";
-  -headTitle = blogPostTitle + " | Patiks.com";
-
-  -description = "El factor “agresividad” puede darse en cualquier raza. Cualquier perro, sea del tamaño o raza que sea, puede tener algún tipo de miedo que le provocan agresividad.";
-
-  -var date = "12 de julio del 2018";
-  -var dateTimeMeta = "2018-07-12T10:43:39Z";
-
-  -var imgUrl = "./img/Pitbull.jpeg";
-  -var imgAlt = "Pitbull dog looking through a window"
-
-  // by default the image source is pexels
-  -var author = "stiv xyz";
-  -var authorUrl = "https://www.pexels.com/@stiv-xyz-39385";
-
-  -ogUrl= "/Un-propietario-irresponsable-es-mas-peligroso-que-un-animal-potencialmente-peligroso.html";
+  -var post = posts[1];  
+  -headTitle = post.blogPostTitle + " | Patiks.com";
 
 
-block main 
-  main(itemscope itemprop="mainContentOfPage" role="main")
-    section(itemscope itemtype="https://schema.org/Blog").section.blogPost
-      article(itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting")
-        meta(itemprop="mainEntityOfPage" content="./zoo.html")
-        h1(itemprop="name headline").blogPost__title=blogPostTitle
-        p.blogPost__date: time(datetime=dateTimeMeta itemprop="datePublished")=date 
-        figure(itemprop="image" itemscope itemtype="https://schema.org/ImageObject")
-          img(itemprop="url" alt=imgAlt src=imgUrl).blogPost__img
-          figcaption(itemprop="caption").blogPost__caption Photo by #[a(href=authorUrl target="_blank")=author ] from #[a(href="https://www.pexels.com" target="_blank") Pexels].
-        .blogPost__body(itemprop="articleBody")
-        
-          include:markdown-it(html) ../../blogPosts/Un-propietario-irresponsable-es-mas-peligroso-que-un-animal-potencialmente-peligroso.md
+block blogPostUrl
+  include:markdown-it(html) ../../blogPosts/Un-propietario-irresponsable-es-mas-peligroso-que-un-animal-potencialmente-peligroso.md

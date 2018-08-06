@@ -1,0 +1,9 @@
+mixin card-blogPost(post)
+  article(itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting").card
+
+    a(href=post.ogUrl): img(src=post.imgUrl itemprop="image" itemscope itemtype="https://schema.org/ImageObject" alt=post.imgAlt ).card__img
+
+    h2(itemprop="name headline").card__title: a(href=post.ogUrl)=post.blogPostTitle
+
+    p(itemprop="description").card__content=post.description
+    time(datetime=post.dateTimeMeta itemprop="datePublished").card-blog__date=post.date
