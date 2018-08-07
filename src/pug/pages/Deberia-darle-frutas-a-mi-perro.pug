@@ -2,10 +2,10 @@ extends ../includes/blogPostTemplate
 append config
   -var post = posts[posts.length - 7];    
   -title = post.blogPostTitle;
-  -headTitle = post.blogPostTitle + " | Patiks.com";
+  -headTitle = post.blogPostTitle + " | " + site.name;
   -description = post.description;
-  -ogUrl= post.ogUrl;
-  -img = post.imgUrl;
+  -ogUrl= site.domain + post.Url;
+  -ogImgUrl = site.domain + post.imgUrl;
 
 block blogPostUrl
   include:markdown-it(html) ../../blogPosts/Deberia-darle-frutas-a-mi-perro.md 

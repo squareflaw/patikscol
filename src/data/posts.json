@@ -1,82 +1,89 @@
 {
+  "site":{
+    "name":"patiks", 
+    "domain":"https://patiks.ga",
+    "title":"patiks.ga - adopta una mascota",
+
+    "description":"Sitio web en el que puedes adopar a una mascota y aprender sobre el cuidado animal.",
+
+    "logoUrl":"/img/pawprint-logo.svg",
+    "ogImg":"/img/pawprint-logo.svg",
+
+    "theme":"#f19e22",
+    "Repo":"https://github.com/squareflaw/patikscol"
+  },
+
   "pets":[
     {
       "name": "Ruby",
       "age": "8 meses",
       "details":"Esta preciosa nena espera por un hogar definitivo😍🏡.Ya desparasitada y esterilizada💉👀. Para mayor información comunicarse con Yuraima al +58 424-6139173 📲 Cabimas - Zulia📍",
-      "imgUrl":"https://patiks.ga/img/Ruby.jpg"
+      "imgUrl":"/img/Ruby.jpg"
     },
 
     {
       "name": "Mili",
       "age": "2 meses",
       "details":"Hermosa gatita en adopción🐾🐈 Para más información comunicarse con Renata al +584246899357😃❤️ 📲 (Cabimas-Zulia).",
-      "imgUrl":"https://patiks.ga/img/Mili.jpg"
+      "imgUrl":"/img/Mili.jpg"
     },
 
     {
       "name": "Rocky",
       "age": "5 meses",
       "details":"Hermoso cachorro en adopción🐾🐶 Para más información comunicarse con Yuraima al +58 424-6139173 😃😃.",
-      "imgUrl":"https://patiks.ga/img/Rocky.jpg" 
+      "imgUrl":"/img/Rocky.jpg" 
     },
 
     {
       "name": "Zeus",
       "age": "7 meses",
       "details":"Este bebé fue rescatado en la plaza de las 50 (Cabimas-Zulia). Se busca hogar definitivo o temporal. Su rescatista se hará cargo de las vacunas y también de su esterilización. Para mayor información comunicarse al +584120745878 📲.",
-      "imgUrl":"https://patiks.ga/img/Zeus.jpg" 
+      "imgUrl":"/img/Zeus.jpg" 
     },
 
     {
       "name": "Bella",
       "age": "3 meses",
       "details":"Gatita de aproximadamente 3 meses en adopción 🐈🐾 Para más información comunicarse con Soraida al +58 412-6822229 😃❤️ (Cabimas).",
-      "imgUrl":"https://patiks.ga/img/bella.jpg" 
+      "imgUrl":"/img/bella.jpg" 
     },
 
     {
       "name": "Jade",
       "age": "4 meses",
       "details":"Hermosa nena de 4 meses busca un hogar definitivo🏡 Ya desparasitada💉 Para mayor información comunicarseal +58 412-0679993 📲Cabimas - Zulia📍",
-      "imgUrl":"https://patiks.ga/img/Jade.jpg" 
+      "imgUrl":"/img/Jade.jpg" 
     },
 
     {
       "name": "Miedica",
       "age": "6 meses",
       "details":"🌸 Hermosa cachorra de 6 meses en adopción 🐶🐾 Tiene TODAS sus vacunas (se entregan los certificados). Para mayor información comunicarse con Renata al +584246899357😃❤️ Cabimas - Zulia.",
-      "imgUrl":"https://patiks.ga/img/Miedica.jpg" 
+      "imgUrl":"/img/Miedica.jpg" 
     },
 
     {
       "name": "Nana",
       "age": "6 meses",
       "details":"Hermosa de 6 meses en adopción🌻💗 Desparasitada y con todas sus vacunas (se entrega con los certificados) y pronto será esterilizada🐾🐕. Para mayor información comunicarse al +584246899357 😃",
-      "imgUrl":"https://patiks.ga/img/Nana.jpg" 
+      "imgUrl":"/img/Nana.jpg" 
     },
 
     {
       "name": "Celeste",
       "age": "4 meses",
       "details":"Se entrega esterilizada. Para más información comunicarse con Endry al +58 412-0679993 🐶 🐾❤️",
-      "imgUrl":"https://patiks.ga/img/Celeste.jpg" 
+      "imgUrl":"/img/Celeste.jpg" 
     },
 
     {
       "name": "Dubraska",
       "age": "4 meses",
       "details":"💖 Se entregará con compromiso de ser esterilizada por su proteccionista. Para más información comunicarse con Erick al +58 412-1081360 🐾😄",
-      "imgUrl":"https://patiks.ga/img/Dubraska.jpg" 
+      "imgUrl":"/img/Dubraska.jpg" 
     }
   ],
-
-
-
-
-
-
-
 
 
   "posts": [
@@ -89,50 +96,50 @@
       "date": "16 de Julio del 2018",
       "dateTimeMeta": "2018-07-16T10:43:39Z",
 
-      "imgUrl":"https://patiks.ga/img/zoo.jpeg",
+      "imgUrl":"/img/zoo.jpeg",
       "imgAlt": "Sad animal in a cage",
       "imgOriginalSource":"pexels",
       "imgOriginalSourceUrl":"https://pexels.com",
       "imgAuthor": "Tina Nord" ,
       "imgAuthorUrl":"https://www.pexels.com/@nord6",
 
-      "ogUrl":"https://patiks.ga/Los-animales-no-pertenecen-a-zoologicos.html"
+      "Url":"/Los-animales-no-pertenecen-a-zoologicos.html"
     },
     {
       "postNumber": 11,
-      "blogPostTitle": "Un propietario irresponsable es mas peligroso que un animal potencialmente peligroso Prueba",
+      "blogPostTitle": "Un propietario irresponsable es mas peligroso que un animal potencialmente peligroso",
 
       "description": "El factor “agresividad” puede darse en cualquier raza. Cualquier perro, sea del tamaño o raza que sea, puede tener algún tipo de miedo que le provocan agresividad.",
 
       "date": "12 de Julio del 2018",
       "dateTimeMeta": "2018-07-12T10:43:39Z",
 
-      "imgUrl":"https://patiks.ga/img/Pitbull.jpeg",
+      "imgUrl":"/img/Pitbull.jpeg",
       "imgAlt": "Pitbull dog looking through a window",
       "imgOriginalSource":"pexels",
       "imgOriginalSourceUrl":"https://pexels.com",
       "imgAuthor": "stiv xyz" ,
       "imgAuthorUrl":"https://www.pexels.com/@stiv-xyz-39385",
 
-      "ogUrl":"https://patiks.ga/Un-propietario-irresponsable-es-mas-peligroso-que-un-animal-potencialmente-peligroso.html"
+      "Url":"/Un-propietario-irresponsable-es-mas-peligroso-que-un-animal-potencialmente-peligroso.html"
     },  
     {
       "postNumber": 10,
-      "blogPostTitle": "Obesidad en perros becerros",
+      "blogPostTitle": "Obesidad en perros",
 
       "description": "El punto más difícil e importante es hacer comprender la magnitud del problema al propietario y a su familia.",
 
       "date": "9 de Julio del 2018",
       "dateTimeMeta": "2018-07-09T10:43:39Z",
 
-      "imgUrl":"https://patiks.ga/img/fatDog.jpg",
+      "imgUrl":"/img/fatDog.jpg",
       "imgAlt": "image of a fat dog",
       "imgOriginalSource":"Instagram",
       "imgOriginalSourceUrl":"https://instagram.com",
       "imgAuthor": "@PatiksCOL" ,
       "imgAuthorUrl":"https://www.instagram.com/patikscol",
 
-      "ogUrl":"https://patiks.ga/Obesidad-en-perros.html"
+      "Url":"/Obesidad-en-perros.html"
     },  
     {
       "postNumber": 9,
@@ -143,14 +150,14 @@
       "date": "8 de Julio del 2018",
       "dateTimeMeta": "2018-07-08T10:43:39Z",
 
-      "imgUrl":"https://patiks.ga/img/picor.jpg",
+      "imgUrl":"/img/picor.jpg",
       "imgAlt": "dog scratchig",
       "imgOriginalSource":"Instagram",
       "imgOriginalSourceUrl":"https://instagram.com",
       "imgAuthor": "@PatiksCOL" ,
       "imgAuthorUrl":"https://www.instagram.com/patikscol",
 
-      "ogUrl":"https://patiks.ga/El-picor-en-los-perros.html"
+      "Url":"/El-picor-en-los-perros.html"
     },  
     {
       "postNumber": 8,
@@ -161,14 +168,14 @@
       "date": "16 de Mayo del 2018",
       "dateTimeMeta": "2018-05-16T10:43:39Z",
 
-      "imgUrl":"https://patiks.ga/img/importaTodo.jpg",
+      "imgUrl":"/img/importaTodo.jpg",
       "imgAlt": "Dog sitting illustrations",
       "imgOriginalSource":"Ruzestudio",
       "imgOriginalSourceUrl":"https://www.instagram.com/ruzestudio/",
       "imgAuthor": "@giauzcategui" ,
       "imgAuthorUrl":"https://www.instagram.com/giauzcategui/",
 
-      "ogUrl":"https://patiks.ga/Se-alguien-a-quien-le-importe-todo.html"
+      "Url":"/Se-alguien-a-quien-le-importe-todo.html"
     },  
     {
       "postNumber": 7,
@@ -179,14 +186,14 @@
       "date": "11 de Mayo del 2018",
       "dateTimeMeta": "2018-05-11T10:43:39Z",
 
-      "imgUrl":"https://patiks.ga/img/frutas.jpg",
+      "imgUrl":"/img/frutas.jpg",
       "imgAlt": "dog eating a banana",
       "imgOriginalSource":"Instagram",
       "imgOriginalSourceUrl":"https://www.instagram.com/",
       "imgAuthor": "@PatiksCOL" ,
       "imgAuthorUrl":"https://www.instagram.com/patikscol/",
 
-      "ogUrl":"https://patiks.ga/Deberia-darle-frutas-a-mi-perro.html"
+      "Url":"/Deberia-darle-frutas-a-mi-perro.html"
     },  
     {
       "postNumber": 6,
@@ -197,14 +204,14 @@
       "date": "23 de Abril del 2018",
       "dateTimeMeta": "2018-04-23T10:43:39Z",
 
-      "imgUrl":"https://patiks.ga/img/ceroChocolate.jpg",
+      "imgUrl":"/img/ceroChocolate.jpg",
       "imgAlt": "Dog scared",
       "imgOriginalSource":"Instagram",
       "imgOriginalSourceUrl":"https://www.instagram.com/",
       "imgAuthor": "@PatiksCOL" ,
       "imgAuthorUrl":"https://www.instagram.com/patikscol/",
 
-      "ogUrl":"https://patiks.ga/cero-chocolate.html"
+      "Url":"/cero-chocolate.html"
     },  
     {
       "postNumber": 5,
@@ -215,14 +222,14 @@
       "date": "10 de Abril del 2018",
       "dateTimeMeta": "2018-04-10T10:43:39Z",
 
-      "imgUrl":"https://patiks.ga/img/adopta.jpg",
+      "imgUrl":"/img/adopta.jpg",
       "imgAlt": "Dog illustration",
       "imgOriginalSource":"Ruzestudio",
       "imgOriginalSourceUrl":"https://www.instagram.com/ruzestudio/",
       "imgAuthor": "@giauzcategui" ,
       "imgAuthorUrl":"https://www.instagram.com/giauzcategui/",
 
-      "ogUrl":"https://patiks.ga/Ventajas-de-adoptar-una-mascota.html"
+      "Url":"/Ventajas-de-adoptar-una-mascota.html"
     },  
     {
       "postNumber": 4,
@@ -233,14 +240,14 @@
       "date": "04 de Abril del 2018",
       "dateTimeMeta": "2018-04-04T10:43:39Z",
 
-      "imgUrl":"https://patiks.ga/img/dog-airplaneShape.svg",
+      "imgUrl":"/img/dog-airplaneShape.svg",
       "imgAlt": "Dog illustration",
       "imgOriginalSource":"flaticon",
       "imgOriginalSourceUrl":"https://www.flaticon.com",
       "imgAuthor": "freepik" ,
       "imgAuthorUrl":"https://www.flaticon.com/authors/freepik",
 
-      "ogUrl":"https://patiks.ga/Mis-duenos-se-van-del-pais.html"
+      "Url":"/Mis-duenos-se-van-del-pais.html"
     },  
     {
       "postNumber": 3,
@@ -251,14 +258,14 @@
       "date": "06 de Marzo del 2018",
       "dateTimeMeta": "2018-03-06T10:43:39Z",
 
-      "imgUrl":"https://patiks.ga/img/recienNacidos.jpg",
+      "imgUrl":"/img/recienNacidos.jpg",
       "imgAlt": "New born puppy",
       "imgOriginalSource":"Instagram",
       "imgOriginalSourceUrl":"https://www.instagram.com/",
       "imgAuthor": "@PatiksCOL" ,
       "imgAuthorUrl":"https://www.instagram.com/patikscol/",
 
-      "ogUrl":"https://patiks.ga/Como-cuidar-cachorros-recien-nacidos-sin-madre.html"
+      "Url":"/Como-cuidar-cachorros-recien-nacidos-sin-madre.html"
     },  
     {
       "postNumber": 2,
@@ -269,14 +276,14 @@
       "date": "31 de Enero del 2018",
       "dateTimeMeta": "2018-01-31T10:43:39Z",
 
-      "imgUrl":"https://patiks.ga/img/wetCat.jpg",
+      "imgUrl":"/img/wetCat.jpg",
       "imgAlt": "Wet cat",
       "imgOriginalSource":"Instagram",
       "imgOriginalSourceUrl":"https://www.instagram.com/",
       "imgAuthor": "@PatiksCOL" ,
       "imgAuthorUrl":"https://www.instagram.com/patikscol/",
 
-      "ogUrl":"https://patiks.ga/Los-gatos-se-banan.html"
+      "Url":"/Los-gatos-se-banan.html"
     } ,  
     {
       "postNumber": 1,
@@ -287,14 +294,14 @@
       "date": "28 de Noviembre de 2017",
       "dateTimeMeta": "2017-11-28T10:43:39Z",
 
-      "imgUrl":"https://patiks.ga/img/desparasitacion.jpg",
+      "imgUrl":"/img/desparasitacion.jpg",
       "imgAlt": "Cat and dog",
       "imgOriginalSource":"Instagram",
       "imgOriginalSourceUrl":"https://www.instagram.com/",
       "imgAuthor": "@PatiksCOL" ,
       "imgAuthorUrl":"https://www.instagram.com/patikscol/",
 
-      "ogUrl":"https://patiks.ga/Desparasitacion.html"
+      "Url":"/Desparasitacion.html"
     }  
   ]
 }

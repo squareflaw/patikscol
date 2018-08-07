@@ -1,10 +1,11 @@
 extends ../config/template
 append config
-  -headTitle = "Sobre nosotros | Patiks"
-  -title = "Sobre nosotros"
-  -description = "Somos una organización sin fines de lucro dedicada a educar, informar y fomentar la adopción para así concienciar a la población sobre la tenencia responsable de un animal."
-  -ogUrl= "https://patiks.ga/about.html"
-  -img = "https://patiks.ga/img/pawprint-logo.svg"
+  -title = "Sobre nosotros";
+  -headTitle = title + " | " + site.name;
+
+  -description = "Somos una organización sin fines de lucro dedicada a educar, informar y fomentar la adopción para así concienciar a la población sobre la tenencia responsable de un animal.";
+
+  -ogUrl= site.domain +"/about.html";
 
 block main
   main(itemscope itemprop="mainContentOfPage" role="main")
