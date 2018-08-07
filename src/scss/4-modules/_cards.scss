@@ -1,16 +1,15 @@
 
 
-
-
-
 .cards {
   max-width: 1000px;
   margin: auto;
+
   display: grid;
   grid-template-columns: repeat(auto-fill,minmax(280px, 1fr));
   justify-content: space-around;
   align-items: start;
   grid-gap: 20px;
+
   background: $white;
     
 }
@@ -38,15 +37,16 @@
   }
 
   &__button {
-    display: block;
     width: 100px;
     padding: 5px;
+
+    display: block;
     @include flexCenter;
 
     background: $secundary-color;
     color: $full-white;
-
     border-radius: 10px;
+
     @include transition;
     
     &:hover {
@@ -68,6 +68,7 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+
     font-size: 1.1rem;
   }
 }
@@ -77,6 +78,7 @@
   display: flex;
   justify-content: space-around;
   flex-flow: row wrap;
+  
   .card-insta {
    margin: 5vh 0;
   }

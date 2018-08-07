@@ -1,8 +1,9 @@
 .footer {
-  background: $primary-color;
-  color: $full-white;
   @include flexCenter;
   flex-direction: column;
+
+  background: $primary-color;
+  color: $full-white;
 
   
   a:hover{
@@ -15,6 +16,7 @@
     width: 100%;
     max-width: 600px;
     margin: 2vh 0;
+
     display: flex;
     justify-content: space-around;
 
@@ -28,7 +30,6 @@
 
   &__author {
     padding: 0 5vw;
-    // text-align: center;
     font-size: 0.9rem;
   }
 
@@ -37,9 +38,10 @@
     @include flexCenter;
     a {
       margin: 2vw 4vw;
+      padding: 0;
+      
       background: $full-white;
       border-radius: 5px;
-      padding: 0;
     }
   }
 }

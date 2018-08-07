@@ -8,7 +8,6 @@ const menuNav = document.querySelector('.menu-nav');
 const NavItems = document.querySelectorAll('.menu-nav__item');
 
 const seeInfoBtn = document.querySelectorAll('.seeInfoBtn');
-// let   isInfoBtnOpen = false;
 
 
 
@@ -19,6 +18,8 @@ menuBtn.addEventListener('click', function(e) {
     menuNav.classList.toggle('isShown');
     NavItems.forEach(item => item.classList.toggle('isShown'));
 });
+
+
 
 window.addEventListener('scroll', function(e) {
     let onTop = window.scrollY;
@@ -44,6 +45,11 @@ seeInfoBtn.forEach(item =>
       item.innerHTML = 'Ver info';            
     }    
 }));
+
+console.clear();
+
+console.log('paso el mio ablame cloro');
+console.log('todo bien?');
 
 
 

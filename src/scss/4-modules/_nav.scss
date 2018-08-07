@@ -1,14 +1,8 @@
 
- 
-
-
-
-
-
-
 .menu {
   width: 100vw;
   min-height: 100vh;
+
   position: fixed;
   top: 0;
   z-index: -1;
@@ -28,6 +22,7 @@
     @include reset-list;
     height: 100vh;
     max-width: 700px;
+
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -41,10 +36,12 @@
 
 
     &__item {
-      @include transition
       margin-bottom: 1rem;
-      border-left: 2px solid $secundary-color;
       padding-left: 1rem;
+
+      border-left: 2px solid $secundary-color;
+
+      @include transition;
 
       @include media($large-min){
         height: auto;
@@ -52,8 +49,10 @@
       }
 
       & > *:hover {
-        color: $secundary-color;
         padding-left: 1.2rem;
+
+        color: $secundary-color;
+        
         @include transition
       }
     }

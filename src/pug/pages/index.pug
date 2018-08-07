@@ -13,34 +13,38 @@ block main
   main(itemscope itemprop="mainContentOfPage" role="main")#main
 
 
-    section.banner#mainBanner
+    section.banner
       p.banner__text El #[span amor] no se puede comprar, pero se puede #[span rescatar.]
       img(srcset="./img/banner-trans.png 578w, ./img/banner-trans-M.png 768w, ./img/banner-trans-L.png 1024w, ./img/banner-trans-Xl.png 1366w"
           src="./img/banner-img.jpg" alt="Dog kissing a woman").banner__img
   
+    .slogan
+      p Patiks es un sitio en el que puedes adoptar a una mascota y aprender sobre el cuidado animal.    
+
+    .illustrations
+      .illustration
+        img(src="./img/womanAndPetShape.svg" alt="Woman and her pet").illustration__img
+        div.illustration__content
+          p.title ¿Por que adoptar?
+          p.content Encontrarás a un amigo fiel y cariñoso cada vez que entres por la puerta.  
 
 
-
-    img(src="./img/womanAndPetShape.svg" alt="Woman and her pet").illustration__img#womanAndPetShape
-    div.illustration__content#womanAndPetShapeContent
-      p.title ¿Por que adoptar?
-      p.content Encontrarás a un amigo fiel y cariñoso cada vez que entres por la puerta.  
-
-
-    img(src="./img/bulldogShape.svg", alt="Bulldog").illustration__img#bulldogShape
-    div.illustration__content#bulldogShapeContent
-      p.title ¡No compres!
-      p.content Mientras muchos compran mascotas, otras mueren en la calle. No compres, adopta uno sin casa. 
+      .illustration
+        img(src="./img/bulldogShape.svg", alt="Bulldog").illustration__img
+        div.illustration__content
+          p.title ¡No compres!
+          p.content Mientras muchos compran mascotas, otras mueren en la calle. No compres, adopta uno sin casa. 
 
 
-    img(src="./img/dog-airplaneShape.svg", alt="Dog watching and airplane take off").illustration__img#airplaneShape
-    div.illustration__content#airplaneShapeContent
-      p.title ¿Te vas del pais?
-      p.content Nosotros te ayudamos a dar a tu mascota en adopción.¡No la abandones!
-      
+      .illustration
+        img(src="./img/dog-airplaneShape.svg", alt="Dog watching and airplane take off").illustration__img
+        div.illustration__content
+          p.title ¿Te vas del país?
+          p.content Nosotros te ayudamos a dar a tu mascota en adopción.¡No la abandones!
+        
 
     
-    section.section.section-pets#pets
+    section.section.section-pets
       .section-title
         h4.title Mascotas
         img(src="./img/pawprints.svg", alt="pawn prints logo")
@@ -62,12 +66,25 @@ block main
 
       .cards
         -for(var i = 0; i < 3 ; i++)
-          +card-blogPost(posts[i]) 
+          +card-blogPost(posts[i])
 
       p.see-all: a(href="./blog.html").button-all Ir al blog
 
 
-    section.section.section-insta#instagram
+    section(itemscope itemtype="https://schema.org/Blog").section.section-blog
+      .section-title
+        h4.title Blogs Destacados
+        img(src="./img/blog-icon.svg", alt="pawn prints logo")
+
+      .cards
+        +card-blogPost(posts[posts.length-5]) 
+        +card-blogPost(posts[posts.length-4]) 
+        +card-blogPost(posts[posts.length-2]) 
+
+      p.see-all: a(href="./blog.html").button-all Ir al blog
+
+
+    section.section.section-insta
       .section-title
         h4.title Hogares encontrados
         img(src="./img/heartbeat-icon.svg" alt="pawn prints logo")
@@ -84,15 +101,16 @@ block main
 
 
 
-    section.section.section-about#about
+    section.section.section-about
       .section-title
         h4.title Sobre nosotros
         img(src="./img/group-icon.svg" alt="pawn prints logo")
-      img(src="./img/us.jpg" alt="Photo with all the members of the organization")
-
-      p Somos una organizacion sin fines de lucro dedicada a educar, informar y fomentar la adopción para así concienciar a la población sobre la tenencia responsable de un animal🐾. 
-
-      p.see-all: a(href="./about.html").button-all Mas sobre nosotros
+      div
+        img(src="./img/us.jpg" alt="Photo with all the members of the organization").section__img
+  
+        .section__content
+          p Somos una organización sin fines de lucro dedicada a educar, informar y fomentar la adopción para así concienciar a la población sobre la tenencia responsable de un animal🐾.
+          p.see-all: a(href="./about.html").button-all Más sobre nosotros
 
 
     

@@ -1,6 +1,6 @@
 .section{
   max-width: 1000px;
-  margin: 20vh auto;
+  margin: 10vh auto;
   
   & > p {
     padding: 5vh 20px;
@@ -11,6 +11,7 @@
     width: 100%;
     margin: 5vh 0;
     padding: 4vh 0;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,13 +33,19 @@
   }
 
   .see-all {
-    text-align: center;
-    background: $white;
-    margin: 0;
+    max-width: 400px;
+    margin: auto;
     padding: 5vh 20px;
+
+    background: $white;
+
+    text-align: center;
+
+
     a {
       color: $primary-color;
       font-size: 1.5rem;
+      
       &.insta-link {color:$blue}
       &:hover{color:$secundary-color}
     }
@@ -56,16 +63,17 @@ a.insta-link {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 500px;
+  max-width: 1000px;
+  font-size: 1.2rem;
 
   img{
-    width: 50%;
-    max-width: 600px;
+    max-width: 200px;
     margin: auto;
   }
 
   p {
-    margin: 20px 0;
+    max-width: 500px;
+    margin: 20px auto;
     padding: 20px;
   }
 }
@@ -76,6 +84,18 @@ a.insta-link {
 .section-about {
   @include flexCenter;
   flex-direction: column;
+  align-items: center;
+
+  div {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+  }
+  .section__img {
+    max-width: 400px;
+    max-height: 400px;
+    margin: auto;
+  }
 
   p {
     max-width: 600px;
@@ -84,8 +104,16 @@ a.insta-link {
   }  
 
   & > img:last-child{
-    width: 30vw;
+    width: 20vw;
     max-width: 400px;
     margin: auto;
+  }
+  .section__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  @include media($medium-min){
   }
 }

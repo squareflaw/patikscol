@@ -1,16 +1,26 @@
 
 
 .illustration__content {
-    width: 100%;
-    margin: 0;
-    padding: 0 10vw;
-    text-align: center;
-    color: $gray;
+  width: 100%;
+  margin: 0;
+  padding: 0 10vw;
+
+  color: $gray;
+
+  text-align: center;
     
-    p.title {
-      color: $full-black;
-      font-size: 1.5rem;
-      font-weight: bold;
-      margin-bottom: 2vh;
-    }
+  p.title {
+    margin-bottom: 2vh;
+
+    color: $full-black;
+    
+    font-size: 1.5rem;
+    font-weight: bold;
   }
+
+  @include media($small-min){      
+    padding: 0 5vw;
+    font-size: 1.2rem;
+  }
+  
+}

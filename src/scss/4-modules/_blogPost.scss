@@ -2,16 +2,30 @@
   max-width: 800px;
   margin: auto;
   padding-top: 15vh;
+  
   background: $full-white;
 
  
-
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  strong {
+    color: $black;
+  }
   
   &__title,
   &__date,
   &__caption,
   &__body {
     padding: 5px 20px;
+    color: hsl(0,0%,30%);
+  }
+
+  &__body {    
+    max-width: 600px;
   }
 
   &__date,
@@ -20,8 +34,8 @@
   }
 
   &__title {
-    font-size: 1.8rem;
     color: $full-black;
+    font-size: 1.8rem;
 
   }
 
@@ -29,6 +43,17 @@
     text-align: center;
     a {
       text-decoration: underline;
+    }
+  }
+
+
+  @include media($medium-min){
+    max-width: 1000px;
+    padding: 5vh 10vw;
+    margin-top: 15vh;
+
+    &__body {
+      font-size: 1.2rem;
     }
   }
 }

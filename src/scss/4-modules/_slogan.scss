@@ -1,0 +1,19 @@
+.slogan {
+  max-width: 1000px;
+  margin: auto;
+
+  border-top: 10px solid $secundary-color;
+
+  p {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+
+    color: hsl(0,0%,30%);
+
+    font-family: $font-family-display; 
+    font-size: 1.5rem;
+    letter-spacing: 2px;   
+    text-align: center;
+  }
+}

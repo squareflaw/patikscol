@@ -2,6 +2,7 @@
   height: 100vh;
   max-width: 1000px;
   margin: auto;
+
   display: flex;
   flex-flow: column no-wrap;
   justify-content: flex-end;
@@ -11,8 +12,10 @@
     max-width: 400px;
     margin: 0 10vw;
     margin-bottom: 5vh;
-    font-size: 1.8rem;
+    
     align-self: flex-end;
+    
+    font-size: 1.8rem;
 
 
     @include media($medium-min){
@@ -42,8 +45,8 @@
     }
 
     &__text {
-      align-self: center;
       margin: 0 5vw;
+      align-self: center;
     }
   }
 }

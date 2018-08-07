@@ -1,5 +1,5 @@
 /*
-  This boilerplate is based on SMACSS
+  This architecture is based on SMACSS
 */
 
 
@@ -20,7 +20,6 @@ $pesticide-debug-depth: false ;
 
 // Base and elements (generic)
 @import "2-base/index";
-// @import "2-base/base";
 
 
 @import "3-layout/index";
