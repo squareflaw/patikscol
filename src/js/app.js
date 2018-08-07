@@ -46,11 +46,6 @@ seeInfoBtn.forEach(item =>
     }    
 }));
 
-console.clear();
-
-console.log('paso el mio ablame cloro');
-console.log('todo bien?');
-
 
 
 })();

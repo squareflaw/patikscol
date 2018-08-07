@@ -81,24 +81,6 @@
 
   "posts": [
     {
-      "postNumber": 13,
-      "blogPostTitle": "Post the prueba",
-
-      "description": "Los animales que viven en cautividad, con independencia de si han nacido en cautiverio o en estado salvaje, presentan una serie de trastornos como estrés, tristeza, inapetencia, claustrofobia, etc. que se englobarían en una patología denominada Zoocosis.",
-
-      "date": "16 de Julio del 2018",
-      "dateTimeMeta": "2018-07-16T10:43:39Z",
-
-      "imgUrl":"https://patiks.ga/img/zoo.jpeg",
-      "imgAlt": "Sad animal in a cage",
-      "imgOriginalSource":"pexels",
-      "imgOriginalSourceUrl":"https://pexels.com",
-      "imgAuthor": "Tina Nord" ,
-      "imgAuthorUrl":"https://www.pexels.com/@nord6",
-
-      "ogUrl":"https://patiks.ga/Los-animales-no-pertenecen-a-zoologicos.html"
-    },
-    {
       "postNumber": 12,
       "blogPostTitle": "Los animales no pertenecen a zoologicos",
 

@@ -39,11 +39,6 @@
       item.innerHTML = 'Ver info';
     }
   }));
-
-  console.clear();
-
-  console.log('paso el mio ablame cloro');
-  console.log('todo bien?');
 })();
 
 },{}]},{},[1]);
