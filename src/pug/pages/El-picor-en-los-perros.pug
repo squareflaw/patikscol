@@ -1,9 +1,11 @@
 extends ../includes/blogPostTemplate
 append config
-  -var post = posts[3];  
+  -var post = posts[posts.length - 9];    
+  -title = post.blogPostTitle;
   -headTitle = post.blogPostTitle + " | Patiks.com";
   -description = post.description;
   -ogUrl= post.ogUrl;
+  -img = post.imgUrl;
   
 block blogPostUrl
   include:markdown-it(html) ../../blogPosts/El-picor-en-los-perros.md 

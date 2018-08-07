@@ -1,9 +1,11 @@
 extends ../includes/blogPostTemplate
 append config
-  -var post = posts[1];  
+  -var post = posts[posts.length - 11];    
+  -title = post.blogPostTitle;
   -headTitle = post.blogPostTitle + " | Patiks.com";
   -description = post.description;
   -ogUrl= post.ogUrl;
+  -img = post.imgUrl;
 
 block blogPostUrl
   include:markdown-it(html) ../../blogPosts/Un-propietario-irresponsable-es-mas-peligroso-que-un-animal-potencialmente-peligroso.md

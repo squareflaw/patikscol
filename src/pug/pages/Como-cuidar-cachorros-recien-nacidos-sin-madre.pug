@@ -1,9 +1,11 @@
 extends ../includes/blogPostTemplate
 append config
-  -var post = posts[9];  
-  -headTitle = post.blogPostTitle + " | Patiks.com"; 
+  -var post = posts[posts.length - 3];    
+  -title = post.blogPostTitle;
+  -headTitle = post.blogPostTitle + " | Patiks.com";
   -description = post.description;
   -ogUrl= post.ogUrl;
+  -img = post.imgUrl;
 
 block blogPostUrl    
   include:markdown-it(html) ../../blogPosts/Como-cuidar-cachorros-recien-nacidos-sin-madre.md     
