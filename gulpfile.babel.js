@@ -98,7 +98,6 @@ gulp.task('images', function() {
     use: [pngcrush()]
   }))
   .pipe(gulp.dest('./public/img'))
-  .pipe(reload({stream:true}))
   .pipe(notify("Finished images task!"));
 });
 
@@ -135,8 +134,8 @@ gulp.task('default', function(done) {
   runSequence('browser-sync', 'styles', 'pug', 'scripts', 'copy', 'watch', done);
 });
 
-gulp.task('deploy', function(done) {
-  runSequence('styles', 'pug', 'scripts', 'copy', 'images', 'watch', done);
+gulp.task('build', function(done) {
+  runSequence('styles', 'pug', 'scripts', 'copy', done);
 });
 
 
