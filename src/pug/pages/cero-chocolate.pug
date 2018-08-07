@@ -1,7 +1,9 @@
 extends ../includes/blogPostTemplate
 append config
   -var post = posts[6];  
-  -headTitle = post.blogPostTitle + " | Patiks.com"; 
+  -headTitle = post.blogPostTitle + " | Patiks.com";
+  -description = post.description;
+  -ogUrl= post.ogUrl; 
 
 
 block blogPostUrl
