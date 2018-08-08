@@ -31,7 +31,10 @@
 
 
   &__img{
-    max-width: 500px;
+    width: 100%;
+    height: auto;
+    max-height: 430px;
+    max-width: 640px;
   }
 
 
@@ -40,12 +43,11 @@
     flex-direction: row-reverse;
 
     &__img {
-      max-height: 50vh;
       align-self: flex-end;
     }
 
     &__text {
-      margin: 0 5vw;
+      margin: 0;
       align-self: center;
     }
   }
