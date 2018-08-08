@@ -1,7 +1,7 @@
 mixin card-blogPost(post)
   article(itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting").card
 
-    a(href=post.Url): img( itemprop="image url" itemscope itemtype="https://schema.org/ImageObject" src=post.imgUrl  alt=post.imgAlt ).card__img
+    a(href=post.Url): img(itemprop="image url" src=post.imgUrl  alt=post.imgAlt ).card__img
 
     h2(itemprop="name headline").card__title: a(href=post.Url)=post.blogPostTitle
 
@@ -12,7 +12,7 @@ mixin card-blogPost(post)
     span(itemprop="publisher" itemscope itemtype="https://schema.org/Organization")
       meta(itemprop="name" content=site.name)
       span(itemprop="logo" itemscope itemtype="https://schema.org/ImageObject")
-        meta(itemprop="url" content=site.logoUrl)
+        meta(itemprop="url" content=site.domain+site.logoUrl)
         meta(itemprop="width" content="60")
         meta(itemprop="height" content="60")
     time(datetime=post.dateTimeMeta itemprop="datePublished").card-blog__date=post.date
