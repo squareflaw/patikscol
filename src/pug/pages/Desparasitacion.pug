@@ -6,6 +6,7 @@ append config
   -description = post.description;
   -ogUrl= site.domain + post.Url;
   -ogImgUrl = site.domain + post.imgUrl;
+  -ogType = "Article";
 
 block blogPostUrl    
   include:markdown-it(html) ../../blogPosts/Desparasitacion.md 

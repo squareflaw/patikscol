@@ -15,7 +15,7 @@ html(lang="es")
 
     //- Open Graph Protocol
     meta(property="og:title" content= title)
-    meta(property="og:type" content="website")
+    meta(property="og:type" content=ogType)
     meta(property="og:description" content= description)
     meta(property="og:url" content= ogUrl)
     meta(property="og:image" content= ogImgUrl)
@@ -25,6 +25,12 @@ html(lang="es")
     meta(property="og:locale:alternate" content="es_MX")
     meta(property="og:locale:alternate" content="es_DO")
     meta(property="og:locale:alternate" content="es_BO")
+
+    meta(property="twitter:card" content="summary_large_image")
+    meta(property="twitter:title" content= headTitle)
+    meta(property="twitter:site" content=ogUrl)
+    meta(property="twitter:description" content=description)
+    meta(name="twitter:image" content=ogImgUrl)
 
     link(rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png")
     link(rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png")

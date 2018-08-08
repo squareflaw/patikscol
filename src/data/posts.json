@@ -10,6 +10,7 @@
     "logoUrlPng":"/img/pawprint-logo.png",
 
     "ogImg":"/img/pawprint-logo.svg",
+    "ogImgPng":"/img/banner-trans.png",
 
     "theme":"#f19e22",
     "Repo":"https://github.com/squareflaw/patikscol"
