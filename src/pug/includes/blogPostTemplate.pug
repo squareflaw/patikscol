@@ -4,10 +4,15 @@ block main
   main(itemscope itemprop="mainContentOfPage" role="main")
     section(itemscope itemtype="https://schema.org/Blog").section.blogPost
       article(itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting") 
-
+        
+        meta(itemprop="mainEntityOfPage" content=post.Url)
         h1(itemprop="name headline").blogPost__title=post.blogPostTitle
 
+        p.blogPost__author: a(rel="author" href="#" title="ver articulos del autor")=post.author
+
+
         p.blogPost__date: time(datetime=post.dateTimeMeta itemprop="datePublished")=post.date
+        meta(itemprop="dateModified" content=post.dateTimeModified)
 
         figure(itemprop="image" itemscope itemtype="https://schema.org/ImageObject")
           img(itemprop="url" alt=post.imgAlt src=post.imgUrl).blogPost__img
@@ -15,3 +20,14 @@ block main
         
         .blogPost__body(itemprop="articleBody")
           block blogPostUrl
+
+        br
+        span(itemprop="author" itemscope itemtype="https://schema.org/Person").blogPost__authorSpace
+          a(rel="author" itemprop="url" href="#" title="View author biography")
+            span(itemprop="name")=post.author
+        span(itemprop="publisher" itemscope itemtype="https://schema.org/Organization")
+          meta(itemprop="name" content=site.name)
+          span(itemprop="logo" itemscope itemtype="https://schema.org/ImageObject")
+            meta(itemprop="url" content=site.logoUrl)
+            meta(itemprop="width" content="60")
+            meta(itemprop="height" content="60")

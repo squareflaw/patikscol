@@ -87,6 +87,10 @@
       "details":"💖 Se entregará con compromiso de ser esterilizada por su proteccionista. Para más información comunicarse con Erick al +58 412-1081360 🐾😄",
       "imgUrl":"/img/Dubraska.jpg" 
     }
+
+
+
+
   ],
 
 
@@ -96,14 +100,19 @@
 
 
   "posts": [
+
+
+    
     {
       "postNumber": 12,
       "blogPostTitle": "Los animales no pertenecen a zoologicos",
 
       "description": "Los animales que viven en cautividad, con independencia de si han nacido en cautiverio o en estado salvaje, presentan una serie de trastornos como estrés, tristeza, inapetencia, claustrofobia, etc. que se englobarían en una patología denominada Zoocosis.",
-
+      "author": "Nombre del autor",
+      
       "date": "16 de Julio del 2018",
       "dateTimeMeta": "2018-07-16T10:43:39Z",
+      "dateTimeModified": "2018-07-16T10:43:39Z",
 
       "imgUrl":"/img/zoo.jpeg",
       "imgAlt": "Sad animal in a cage",
@@ -114,14 +123,20 @@
 
       "Url":"/Los-animales-no-pertenecen-a-zoologicos.html"
     },
+
+
+
+
     {
       "postNumber": 11,
       "blogPostTitle": "Un propietario irresponsable es mas peligroso que un animal potencialmente peligroso",
 
       "description": "El factor “agresividad” puede darse en cualquier raza. Cualquier perro, sea del tamaño o raza que sea, puede tener algún tipo de miedo que le provocan agresividad.",
-
+      "author": "Nombre del autor",
+      
       "date": "12 de Julio del 2018",
       "dateTimeMeta": "2018-07-12T10:43:39Z",
+      "dateTimeModified": "2018-07-12T10:43:39Z",
 
       "imgUrl":"/img/Pitbull.jpeg",
       "imgAlt": "Pitbull dog looking through a window",
@@ -137,9 +152,11 @@
       "blogPostTitle": "Obesidad en perros",
 
       "description": "El punto más difícil e importante es hacer comprender la magnitud del problema al propietario y a su familia.",
-
+      "author": "Nombre del autor",
+      
       "date": "9 de Julio del 2018",
       "dateTimeMeta": "2018-07-09T10:43:39Z",
+      "dateTimeModified": "2018-07-09T10:43:39Z",
 
       "imgUrl":"/img/fatDog.jpg",
       "imgAlt": "image of a fat dog",
@@ -155,9 +172,11 @@
       "blogPostTitle": "El picor en los perros",
 
       "description": "El prurito o picor es una sensación cutánea desagradable que provoca un deseo incontrolado de rascarse, lamerse, morderse o frotarse la piel.",
-
+      "author": "Nombre del autor",
+      
       "date": "8 de Julio del 2018",
       "dateTimeMeta": "2018-07-08T10:43:39Z",
+      "dateTimeModified": "2018-07-08T10:43:39Z",
 
       "imgUrl":"/img/picor.jpg",
       "imgAlt": "dog scratchig",
@@ -173,9 +192,11 @@
       "blogPostTitle": "Se alguien aquien le importe todo.",
 
       "description": "Uno de los mayores enemigos que tienen los animales es la indiferencia y el egoismo de los seres humanos.",
-
+      "author": "Nombre del autor",
+      
       "date": "16 de Mayo del 2018",
       "dateTimeMeta": "2018-05-16T10:43:39Z",
+      "dateTimeModified": "2018-05-16T10:43:39Z",
 
       "imgUrl":"/img/importaTodo.jpg",
       "imgAlt": "Dog sitting illustrations",
@@ -191,9 +212,11 @@
       "blogPostTitle": "¿Deberia darle frutas a mi perro?",
 
       "description": "Qué frutas pueden comer los perros es una buena pregunta, porque en esta cuestión no todo vale.",
-
+      "author": "Nombre del autor",
+      
       "date": "11 de Mayo del 2018",
       "dateTimeMeta": "2018-05-11T10:43:39Z",
+      "dateTimeModified": "2018-05-11T10:43:39Z",
 
       "imgUrl":"/img/frutas.jpg",
       "imgAlt": "dog eating a banana",
@@ -209,9 +232,11 @@
       "blogPostTitle": "¡Cero chocolate para ti!",
 
       "description": "El chocolate es uno de los envenenamientos en perros que más tratan los veterinarios.",
-
+      "author": "Nombre del autor",
+      
       "date": "23 de Abril del 2018",
       "dateTimeMeta": "2018-04-23T10:43:39Z",
+      "dateTimeModified": "2018-04-23T10:43:39Z",
 
       "imgUrl":"/img/ceroChocolate.jpg",
       "imgAlt": "Dog scared",
@@ -227,9 +252,11 @@
       "blogPostTitle": "Ventajas de adoptar una mascota",
 
       "description": "En primer lugar y las más importante, la oportunidad de cambiar no solo una, sino la vida de dos perros, el que decides adoptar y el callejero que va a ocupar el puesto que deja el perro que tú te llevas.",
-
+      "author": "Nombre del autor",
+      
       "date": "10 de Abril del 2018",
       "dateTimeMeta": "2018-04-10T10:43:39Z",
+      "dateTimeModified": "2018-04-10T10:43:39Z",
 
       "imgUrl":"/img/adopta.jpg",
       "imgAlt": "Dog illustration",
@@ -245,9 +272,11 @@
       "blogPostTitle": "Mis dueños se val del pais",
 
       "description": "El incremento de abandono de perros y gatos está también relacionado con el aumento de la emigración venezolana.",
-
+      "author": "Nombre del autor",
+      
       "date": "04 de Abril del 2018",
       "dateTimeMeta": "2018-04-04T10:43:39Z",
+      "dateTimeModified": "2018-04-04T10:43:39Z",
 
       "imgUrl":"/img/dog-airplaneShape.svg",
       "imgAlt": "Dog illustration",
@@ -263,9 +292,11 @@
       "blogPostTitle": "Como cuidar cachorros recién nacidos sin madre",
 
       "description": "Lamentablemente se puede presentar el caso en que los cachorros no tengan a su madre ya sea porque le ocurrió algún accidente, rechazó a los cachorros o sencillamente porque los rescataste sin ella.",
-
+      "author": "Nombre del autor",
+      
       "date": "06 de Marzo del 2018",
       "dateTimeMeta": "2018-03-06T10:43:39Z",
+      "dateTimeModified": "2018-03-06T10:43:39Z",
 
       "imgUrl":"/img/recienNacidos.jpg",
       "imgAlt": "New born puppy",
@@ -281,9 +312,11 @@
       "blogPostTitle": "¿Los gatos se bañan?",
 
       "description": "Los gatos, además de ser animales extremadamente limpios que se acicalan continuamente con la ayuda de su lengua, acostumbran a mostrar hostilidad ante el contacto de su cuerpo con el agua.",
-
+      "author": "Nombre del autor",
+      
       "date": "31 de Enero del 2018",
       "dateTimeMeta": "2018-01-31T10:43:39Z",
+      "dateTimeModified": "2018-01-31T10:43:39Z",
 
       "imgUrl":"/img/wetCat.jpg",
       "imgAlt": "Wet cat",
@@ -299,9 +332,11 @@
       "blogPostTitle": "Desparasitación ",
 
       "description": "La desparasitación periódica de una mascota es fundamental tanto para la salud de la mascota como la nuestra propia.",
-
+      "author": "Nombre del autor",
+      
       "date": "28 de Noviembre de 2017",
       "dateTimeMeta": "2017-11-28T10:43:39Z",
+      "dateTimeModified": "2017-11-28T10:43:39Z",
 
       "imgUrl":"/img/desparasitacion.jpg",
       "imgAlt": "Cat and dog",

@@ -19,8 +19,9 @@
   &__title,
   &__date,
   &__caption,
-  &__body {
-    padding: 5px 20px;
+  &__body,
+  &__author {
+    padding: 2px 20px;
     color: hsl(0,0%,30%);
   }
 
@@ -44,6 +45,12 @@
     a {
       text-decoration: underline;
     }
+  }
+
+  &__authorSpace {
+    width: 100%;
+    display: block;
+    border-top: 2px solid $silver;
   }
 
 
