@@ -7,6 +7,8 @@
     "description":"Sitio web en el que puedes adopar a una mascota y aprender sobre el cuidado animal.",
 
     "logoUrl":"/img/pawprint-logo.svg",
+    "logoUrlPng":"/img/pawprint-logo.png",
+
     "ogImg":"/img/pawprint-logo.svg",
 
     "theme":"#f19e22",
@@ -278,7 +280,7 @@
       "dateTimeMeta": "2018-04-04T10:43:39Z",
       "dateTimeModified": "2018-04-04T10:43:39Z",
 
-      "imgUrl":"/img/dog-airplaneShape.svg",
+      "imgUrl":"/img/dog-airplaneShape.png",
       "imgAlt": "Dog illustration",
       "imgOriginalSource":"flaticon",
       "imgOriginalSourceUrl":"https://www.flaticon.com",
