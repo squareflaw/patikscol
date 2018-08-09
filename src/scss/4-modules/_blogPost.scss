@@ -57,11 +57,45 @@
 
   @include media($medium-min){
     max-width: 1000px;
-    padding: 5vh 10vw;
+    padding: 5vh 2vw;
     margin-top: 15vh;
 
     &__body {
       font-size: 1.2rem;
     }
   }
+}
+
+#disqus_thread{
+  padding: 20px;
+}
+
+
+
+.share-pitch {
+  max-width: 600px;
+  margin-top: 50px;
+  padding: 20px;
+  span{
+    color: hsl(0,0%,0%);
+    font-weight: bold;    
+  }
+}
+
+.share-buttons{
+  width: 100%;
+  display: flex;
+  max-width: 300px;
+  .share__tw,
+  .share__fb{
+    width: 60px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    display: block;
+  }
+}
+
+.recommendations-title {
+  font-size: 1.5rem;
+  padding: 20px;
 }

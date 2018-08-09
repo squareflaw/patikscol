@@ -1,4 +1,5 @@
 extends ../config/template
+include ../includes/card-blogPost
 
 block main
   main(itemscope itemprop="mainContentOfPage" role="main")
@@ -20,8 +21,18 @@ block main
         
         .blogPost__body(itemprop="articleBody")
           block blogPostUrl
+        
 
-        br
+        p.share-pitch Si te gustó este artículo #[span compártelo] para que difundamos más sobre nuestro amor por los animales.
+
+        .share-buttons
+          
+          a(href="https://www.facebook.com/sharer/sharer.php?u="+ogUrl target="_blank"): img(src="/img/facebook-logo-color.svg" alt="Facebook share button").share__fb
+          
+          a(href="https://twitter.com/home?status="+post.blogPostTitle+" "+ogUrl target="_blank"): img(src="/img/twitter-logo-color.svg" alt="Twitter share button").share__tw
+
+
+
         span(itemprop="author" itemscope itemtype="https://schema.org/Person").blogPost__authorSpace
           a(rel="author" itemprop="url" href="#" title="View author biography")
             span(itemprop="name")=post.author
@@ -31,6 +42,19 @@ block main
             meta(itemprop="url" content= site.domain + site.logoUrlPng)
             meta(itemprop="width" content="60")
             meta(itemprop="height" content="60")
+        
+        p.recommendations-title Artículos más recientes
+        .cards.cards-recommendations
+          -for(var i = 0; i < 3 ; i++)
+            +card-blogPost(posts[i])
+
+
+
+        p.recommendations-title Artículos destacados
+        .cards.cards-recommendations
+          +card-blogPost(post_destacado_1) 
+          +card-blogPost(post_destacado_2) 
+          +card-blogPost(post_destacado_3)
 
         .comments
           <div id="disqus_thread"></div>

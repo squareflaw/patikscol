@@ -13,7 +13,7 @@
     "ogImgPng":"/img/banner-trans.png",
 
     "theme":"#f19e22",
-    "Repo":"https://github.com/squareflaw/patikscol"
+    "repo":"https://github.com/squareflaw/patikscol"
   },
 
 
@@ -272,7 +272,7 @@
     },  
     {
       "postNumber": 4,
-      "blogPostTitle": "Mis dueños se val del pais",
+      "blogPostTitle": "Mis dueños se van del pais",
 
       "description": "El incremento de abandono de perros y gatos está también relacionado con el aumento de la emigración venezolana.",
       "author": "Nombre del autor",
