@@ -9,7 +9,6 @@ tags:
   - perros
   - cuidados
   - comida
-  - gatos
 author: Nombre del author
 date: 2018-08-14T12:22:51.000Z
 img: /images/cerochocolate.jpg
