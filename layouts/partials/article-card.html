@@ -1,0 +1,22 @@
+<article itemprop="blogPost" itemscope="" itemtype="https://schema.org/BlogPosting" class="card">      
+
+    <meta itemprop="mainEntityOfPage" content="{{.Permalink}}">
+    <a href="{{.URL}}"><img src="{{.Params.img}}" alt="{{.Params.imgAlternativeText}}" itemprop="image url" class="card__img"></a>
+
+    <h2 itemprop="name headline" class="card__title"><a href="{{.URL}}">{{.Title}}</a></h2>
+
+    <p itemprop="description" class="card__content">{{.Description}}</p>
+    <span itemprop="author" itemscope="" itemtype="https://schema.org/Person" class="card__author">
+      <a href="#" rel="author" itemprop="url" title="Ver articulos del autor"><span itemprop="name">{{.Params.author}}</span></a>
+    </span>
+    <span itemprop="publisher" itemscope="" itemtype="https://schema.org/Organization">
+        <meta itemprop="name" content="{{.Site.Title}}">
+        <span itemprop="logo" itemscope="" itemtype="https://schema.org/ImageObject">
+            <meta itemprop="url" content="{{.Site.Params.logoUrlPng}}">
+            <meta itemprop="width" content="60">
+            <meta itemprop="height" content="60">
+        </span>
+    </span>
+    <time datetime="{{.Date}}" itemprop="datePublished" class="card-blog__date">{{dateFormat "2 Jan 2006" .Date}}</time>
+    <meta itemprop="dateModified" content="{{.Lastmod}}">
+</article>

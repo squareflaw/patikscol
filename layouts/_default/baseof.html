@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="{{ .Site.LanguageCode | default "en" }}">
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+        <title>{{ block "title" . }}
+            {{- with .Title }}{{ . }} | {{ end }}{{ .Site.Title -}}
+        {{ end }}</title>
+
+        <meta name="description" content="{{with .Description}}{{.}}{{else}}{{.Site.Params.description}}{{end}}" />
+
+
+
+
+        <meta property="og:title" content="{{if eq .Type `pets`}}{{.Params.Name}} esta buscando un hogar{{else}}{{.Title}}{{end}}"/>
+
+        <meta property="og:type" content="{{if eq .Type `blog`}}article{{else}}website{{end}}"/>
+
+        <meta property="og:description" content="{{if eq .Type `pets`}}{{.Content}}{{else}}{{with .Description}}{{.}}{{else}}{{.Site.Params.description}}{{end}}{{end}}"/>
+
+        <meta property="og:description" content="{{with .Description}}{{.}}{{else}}{{.Site.Params.description}}{{end}}"/>
+
+        <meta property="og:url" content=" {{.Permalink}} "/>
+
+        <meta property="og:image" content="{{if isset .Params `socialMediaImg`}}
+        {{.Site.BaseURL}}{{ .Params.socialMediaImg}}
+        {{else if isset .Params `img`}}{{.Site.BaseURL}}{{ .Params.img}}
+        {{else}}{{.Site.BaseURL}}{{ .Site.Params.logoUrlPng}}{{end}}"/>
+
+        <meta property="og:site_name" content="{{.Site.Title}} "/>
+
+        <meta property="og:locale" content="es_VE" />
+        <meta property="og:locale:alternate" content="es_CO" />
+        <meta property="og:locale:alternate" content="es_MX" />
+        <meta property="og:locale:alternate" content="es_DO" />
+        <meta property="og:locale:alternate" content="es_BO" />
+
+
+
+
+        <meta property="twitter:card" content="summary_large_image"/>
+
+        <meta property="twitter:title" content="{{if eq .Type `pets`}}{{.Params.Name}} esta buscando un hogar{{else}}{{.Title}}{{end}}" />
+
+        <meta property="twitter:site" content= "{{.Permalink}}"/>
+
+        <meta property="twitter:description" content="{{if eq .Type `pets`}}{{.Content}}{{else}}{{with .Description}}{{.}}{{else}}{{.Site.Params.description}}{{end}}{{end}}"/>
+
+        <meta name="twitter:image" content="{{if isset .Params `socialMediaImg`}}{{.Site.BaseURL}}{{ .Params.socialMediaImg}}
+        {{else if isset .Params `img`}}{{.Site.BaseURL}}{{ .Params.img}}
+        {{else}}{{.Site.BaseURL}}{{ .Site.Params.logoUrlPng}}
+        {{end}}"/>
+
+
+
+        <meta name="theme-color" content="{{.Site.Params.themeColor}}"/>
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Montserrat">
+
+        <link rel="stylesheet" href="/css/app.css">
+        {{ .Hugo.Generator }}
+
+    </head>
+    <body itemscope itemtype="https://schema.org/WebPage">
+
+        {{ block "header" . }}{{ partial "site/header.html" . }}{{ end }}
+
+        <main class="site-main" itemscope itemprop="mainContentOfPage" role="main">
+
+            {{ block "main" . }}{{ end }}
+
+        </main>
+
+        {{ block "footer" . }}{{ partial "site/footer.html" . }}{{ end }}
+
+        <script src="/js/app.js"></script>
+
+    </body>
+</html>

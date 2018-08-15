@@ -1,0 +1,82 @@
+//Colors
+
+
+$full-black:	 hsl(0,0%,10%);
+$black:		 	   hsl(0,0%,20%);
+$low-gray: 		 hsl(0,0%,25%);
+$gray: 			   hsl(0,0%,50%);
+$silver:	 	   hsl(0,0%,75%);
+$white: 		   hsl(0,0%,96%);
+$full-white: 	 hsl(0,0%,100%);
+
+$red: 			#e6194b;
+$green: 		#3cb44b;
+$yellow:		#ffe119;
+$blue: 			#0082c8;
+$orange:		#f58231;
+$purple:		#911eb4;
+$cyan: 			#46f0f0;
+$magenta:		#f032e6;
+$lime:			#d2f53c;
+$pink:			#fabebe;
+$teal: 			#008080;
+$lavender:	#e6beff;
+$brown: 		#aa6e28;
+$beige: 		#fffac8;
+$maroon:		#800000;
+$mint:			#aaffc3;
+$olive:			#808000;
+$navy: 			#000080;
+
+
+
+
+$custom-primary-color: hsl(45,85%,65%);
+$palette-color-1: #F7C882;
+$palette-color-2: #f19e22;
+$palette-color-3: #ba4c20; 
+
+
+
+$primary-color:		$palette-color-2;
+$secundary-color:	$palette-color-3;
+$important-color:	$blue;
+$link-color:		$blue;
+
+
+
+$color-background: $white;
+$color-text: $low-gray;
+
+
+
+
+
+//FONTS
+
+$font-size-base: 18px;
+
+$min-font-size: 18;
+$max-font-size: 22;
+$min-screen-size: 320;
+$max-screen-size: 1330;
+	
+$font-family-display: 'Lobster', cursive;;
+$font-family-default: 'Montserrat',san serif;
+
+
+// //Images
+// $home-image:    "../img/bg.jpeg";
+// $home-image-medium: "../img/bg-medium.jpeg";
+// $home-image-full:   "../img/bg-full.jpeg";
+
+
+
+
+//breakpoints
+
+$small-min: 578px;
+$medium-min: 768px;
+$large-min: 960px;
+$x-large-min: 1200px;
+

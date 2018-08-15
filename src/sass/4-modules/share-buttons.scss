@@ -1,0 +1,15 @@
+.share-buttons{
+  width: 100%;
+  display: flex;
+  max-width: 300px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  .share__tw,
+  .share__fb,
+  .share__ws,{
+    width: 50px;
+    margin-right: 10px;
+    display: block;
+    border-radius: 8px;
+  }
+}

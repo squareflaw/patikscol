@@ -1,0 +1,13 @@
+<div class="card card-pet">
+    <a href="{{.URL}}"><img src="{{.Params.img}}" alt="Pet image" class="card__img"></a>
+    <h3 class="card__title card-pet__title"><a href="{{.URL}}">{{.Params.name}}</a></h3>
+    <div class="card-pet__data">
+      <p class="card-pet__age">{{.Params.age}}</p>
+      <details>
+        <summary class="card__button seeInfoBtn">Ver info</summary>  
+        <p>{{.Content}}</p>
+        <p>Ubicación: {{.Params.location}}</p>
+        <p>Teléfono:<a href="tel:{{.Params.phone}}" class="card-pet__phone">{{.Params.phone}}</a></p>
+      </details>
+    </div>
+</div>

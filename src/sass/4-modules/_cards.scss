@@ -1,0 +1,103 @@
+
+
+.cards {
+  max-width: 1000px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(280px, 1fr));
+  justify-content: space-around;
+  align-items: start;
+  grid-gap: 20px;
+
+  background: $white;
+    
+}
+
+.card{
+  max-width: 280px;
+  margin: 5vh auto;
+  padding: 1rem;
+
+  background: $full-white;
+  color: $gray;
+
+  font-size: 1rem;
+
+
+  &__img {
+    width: 100%;
+    margin: 0;
+  }
+
+  &__title {
+    margin: 0;
+    color: $full-black;
+    font-size: 1.6rem;
+  }
+
+  &__author {
+    width: 100%;
+    display: block;
+    border-top: 2px solid $silver;
+  }
+
+  &__button {
+    width: 100px;
+    padding: 5px;
+
+    display: block;
+    @include flexCenter;
+
+    background: $secundary-color;
+    color: $full-white;
+    border-radius: 10px;
+
+    @include transition;
+    
+    &:hover {
+      cursor: pointer;
+    }
+
+  }
+}
+
+
+.card-pet {
+  &__title {
+    font-family: $font-family-display;
+    font-size: 2.5rem;
+    font-weight: normal;
+  }
+
+  &__phone {
+    color: $blue;
+    text-decoration: underline;
+  }
+
+  &__data {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    font-size: 1.1rem;
+  }
+}
+
+
+
+
+.cards-insta {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  
+  .card-insta {
+   margin: 5vh 0;
+  }
+}
+
+.cards-recommendations{
+  
+}

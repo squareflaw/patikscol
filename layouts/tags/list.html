@@ -1,0 +1,17 @@
+{{define "main"}}
+
+<section itemscope="" itemtype="https://schema.org/Blog" class="section section-blog">
+      <div class="section-title">
+        {{ $lastUrlElement := index (last 1 (split (delimit (split .URL "/") "," "") ",")) 0 }}
+        <h4 class="title">Artículos: {{$lastUrlElement}}</h4>
+        <img src="/images/blog-icon.svg" alt="pawn prints logo">
+      </div>
+
+      <div class="cards">
+        {{ range .Pages}} 
+          {{ block "article-card-recent" . }}{{ partial "article-card.html" . }}{{ end }}
+        {{ end }} 
+      </div>
+  </section>
+
+{{end}}

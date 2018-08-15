@@ -1,0 +1,50 @@
+{{define "main"}}
+
+
+<section class="pet-profile" >
+  <div class="section-title">
+    <h4 class="title"><a href="../">Mascotas</a></h4>
+    <img src="/images/pawprints.svg" alt="pawn prints logo">
+  </div>
+  <div class="card card-pet card-pet-full">
+      <img src="{{.Params.img}}" alt="Pet image" class="card__img">
+      <div class="wrapper" >
+        <div>
+          <h3 class="card__title card-pet__title">{{.Params.name}}</h3>
+          <p class="card-pet__age"><span>Edad:</span> {{.Params.age}}</p>
+            
+          <div class="card-pet__description">{{.Content}}</div>
+          <p><span>Ubicación:</span> {{.Params.location}}</p>
+          <p><span>Teléfono:</span><a href="tel:{{.Params.phone}}" class="card-pet__phone">{{.Params.phone}}</a></p>        
+          <div class="share-wrapper">
+            <p>Puedes ayudar compartiendo a <span>{{.Params.name}}</span> en tus redes para que pueda encontrar un hogar mas pronto</p>
+            <div class="share-buttons">
+            
+            <a href="https://www.facebook.com/sharer/sharer.php?u={{.Permalink}}" target="_blank"><img src="/images/facebook-logo-color.svg" alt="Facebook share button" class="share__fb"></a>
+            
+            <a href="https://twitter.com/home?status={{.Title}} {{.Permalink}}" target="_blank"><img src="/images/twitter-logo-color.svg" alt="Twitter share button" class="share__tw"></a>
+            
+            <a href="whatsapp://send?text={{.Title}} {{.Permalink}}" target="_blank"><img src="/images/whatsapp-logo-color.svg" alt="whatsapp share button" class="share__ws"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  <div class="l-center adds" style="text-align: center;margin: 0 auto">Anuncio</div>
+  <div class="see-also">
+    <p class="recommendations-title">Lee nuestros artículos:</p>  
+    <div class="recommendations">
+      <ul>
+        {{ range first 3 ( where .Site.Pages "Section" "blog")}} 
+          {{if eq .Params.destacado true}} 
+            <li class="recommendation-card"> 
+              <p class="recommendation-card__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></p>
+            </li>
+          {{end}}
+        {{ end }} 
+      </ul>
+    </div>
+  </div>  
+</section>
+
+{{end}}

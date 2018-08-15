@@ -1,0 +1,37 @@
+/*
+  This architecture is based on SMACSS
+*/
+
+
+//Debugging
+
+$pesticide-debug-outline: false ;
+$pesticide-debug-depth: false ;
+
+
+// Config
+
+@import "0-config/index";
+
+
+
+@import "1-libraries/index";
+
+
+// Base and elements (generic)
+@import "2-base/index";
+
+
+@import "3-layout/index";
+
+@import "4-modules/index";
+
+
+
+@import "5-states/index";
+
+// Shame 
+  // Every hack that was needed to solve a conflict on the fly. This is 
+  //sort of a todo list. with extra time the hack must be changed with a proper
+  //solution.
+@import "shame";

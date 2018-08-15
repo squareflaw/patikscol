@@ -1,0 +1,18 @@
+{{define "main"}}
+
+<section class="section section-about">
+  <div class="section-title">
+    <meta itemprop="mainEntityOfPage" content="ogUrl">
+    <h4 class="title">Sobre nosotros</h4>
+    <img src="/images/group-icon.svg" alt="pawn prints logo">
+  </div>
+  <img src="{{.Params.groupImg}}" alt="Photo with all the members of the organization" class="section__img">
+  
+  {{.Content}}
+
+  <img src="{{.Site.Params.logoUrl}}" alt="Main logo">     
+
+</section>
+
+
+{{end}}

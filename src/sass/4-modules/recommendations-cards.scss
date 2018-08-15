@@ -1,0 +1,40 @@
+
+.blogPost > .recommendations-title {
+  margin: 0;
+  padding: 20px;
+  padding-bottom: 10px;
+
+  color: $secundary-color;
+
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.recommendations{
+  padding: 20px;
+
+  ul{
+    padding: 0; 
+  }
+}
+.recommendation-card{
+  display: flex;
+  align-items: center;
+
+
+  img {
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+    height: auto;
+  }
+
+  &__title{
+    padding-left: 10px;
+    color: $black;
+    border-left: 2px solid $secundary-color; 
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+}

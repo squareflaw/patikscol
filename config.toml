@@ -1,0 +1,55 @@
+baseURL = "https://patiks.ga"
+languageCode = "es-ve"
+title = "Patiks.ga"
+
+googleAnalytics = "UA-123606970-1"
+
+
+enableRobotsTXT = true
+disableAliases = true
+
+[params]
+  name= "Patiks"
+  disallow_search_engines = false # set robots.txt to disallow everything
+  AuthorName = "Albin Garcia"
+  GitHubUser = "squareflaw"
+
+  description = "Sitio web en el que puedes adopar a una mascota y aprender sobre el cuidado animal."
+
+  logoUrl = "/images/pawprint-logo.svg"
+  logoUrlPng = "/images/pawprint-logo.png"
+
+  socialMediaImg = "/images/pawprint-logo.svg"
+  socialMediaImgPng = "/images/banner-trans.png"
+
+  instagramUrl = "https://instagram.com/patikscol"
+  instagramUser = "Patikscol"
+
+  themeColor = "#f19e22"
+  repo = "https://github.com/squareflaw/patikscol"
+  
+
+# add redirects/headers
+[outputs]
+  home = ["HTML", "RSS", "REDIRECTS", "HEADERS"]
+
+# remove .{ext} from text/netlify
+[mediaTypes."text/netlify"]
+  delimiter = ""
+
+# add output format for netlify _redirects
+[outputFormats.REDIRECTS]
+  mediatype = "text/netlify"
+  baseName = "_redirects"
+  isPlainText = true
+  notAlternative = true
+
+# add output format for netlify _headers
+[outputFormats.HEADERS]
+  mediatype = "text/netlify"
+  baseName = "_headers"
+  isPlainText = true
+  notAlternative = true
+
+
+

@@ -1,142 +1,173 @@
+'use strict'
 
+import gulp from 'gulp'
+import del from 'del'
+import runSequence from 'run-sequence'
+import gulpLoadPlugins from 'gulp-load-plugins'
+import { spawn } from "child_process"
+import tildeImporter from 'node-sass-tilde-importer'
+import fs from 'fs';
 
-const gulp = require( 'gulp');
-const plumber = require( 'gulp-plumber');
-const pug = require( 'gulp-pug');
-const browserSync = require( 'browser-sync');
-const reload      = browserSync.reload; 
-const sass = require( 'gulp-sass');
-const postcss = require( 'gulp-postcss');
-const cssnano = require( 'cssnano');
-const watch = require( 'gulp-watch');
-const browserify = require( 'browserify');
-const babelify = require( 'babelify');
-const source = require( 'vinyl-source-stream');
-const sourcemaps = require( 'gulp-sourcemaps');
-const buffer = require( 'vinyl-buffer');
-const imagemin = require( 'gulp-imagemin');
-const pngcrush = require( 'imagemin-pngcrush');
-const notify = require( 'gulp-notify');
-const data = require( 'gulp-data');
-const fs = require( 'fs');
-const runSequence = require('run-sequence');
+const $ = gulpLoadPlugins()
+const browserSync = require('browser-sync').create()
+const isProduction = process.env.NODE_ENV === 'production'
 
+const onError = (err) => {
+    console.log(err)
+}
 
-const bases = {
-    app:  'src/',
-    dist: 'public/',
-};
+let suppressHugoErrors = false;
 
-const postcssPlugins = [
-  cssnano({
-    core: false,
-    autoprefixer: {
-      add: true,
-      browsers: '> 1%, last 2 versions, Firefox ESR, Opera 12.1'
-    }
-  })
-];
+// --
 
-var onError = function(err) {
-  notify.onError({
-    title:    "Gulp",
-    subtitle: "Failure!",
-    message:  "Error: <%= error.message %>",
-    sound:    "Basso"
-  })(err);
-  this.emit('end');
-};
+gulp.task('server', ['build'], () => {
+    gulp.start('init-watch')
+    $.watch(['archetypes/**/*', 'data/**/*', 'content/**/*', 'layouts/**/*', 'static/**/*', 'config.toml'], () => gulp.start('hugo'))
+});
 
-const sassOptions = {
-	outputSyle: 'expanded',
-	includePaths: ['node_modules']
-};
+gulp.task('server:with-drafts', ['build-preview'], () => {
+    gulp.start('init-watch')
+    $.watch(['archetypes/**/*', 'data/**/*', 'content/**/*', 'layouts/**/*', 'static/**/*', 'config.toml'], () => gulp.start('hugo-preview'))
+});
 
-gulp.task('styles', () =>
-  gulp.src('./src/scss/styles.scss')
-    .pipe(sourcemaps.init({ loadMaps: true }))
-    .pipe(plumber({errorHandler: onError}))
-    .pipe(sass(sassOptions))
-    .pipe(postcss(postcssPlugins))
-    .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('./public/css'))
-    .pipe(reload({stream:true}))
-);
-
-gulp.task('pug', () =>
-  gulp.src('./src/pug/pages/*.pug')
-    .pipe(plumber({errorHandler: onError}))
-    .pipe(data(function(file) {
-      return JSON.parse(fs.readFileSync('./src/data/posts.json'))
-    }))
-    .pipe(pug())
-    .pipe(gulp.dest('./public'))
-    .pipe(reload({stream:true}))
-);
-
-gulp.task('scripts', () =>
-  browserify('./src/js/app.js')
-    .transform(babelify,{global:true})
-    .bundle()
-    .on('error', function(err){
-      console.error(err);
-      this.emit('end')
+gulp.task('init-watch', () => {
+    suppressHugoErrors = true;
+    browserSync.init({
+        server: {
+            baseDir: 'public'
+        },
+        open: false
     })
-    .pipe(source('app.js'))
-    .pipe(buffer())
-    .pipe(sourcemaps.init({ loadMaps: true }))
-    .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('./public/js'))
-    .pipe(reload({stream:true}))
-);
+    $.watch('src/sass/**/*.scss', () => gulp.start('sass'))
+    $.watch('src/js/**/*.js', () => gulp.start('js-watch'))
+    $.watch('src/images/**/*', () => gulp.start('images'))  
+    $.watch('src/lambda/**/*', () => gulp.start('build-functions'))  
+})
 
-gulp.task('images', function() {
- gulp.src('./src/img/**/*.{png,jpg,jpeg,gif,PNG}')
-  .pipe(imagemin({
-    progressive: true,
-    svgoPlugins: [{removeViewBox: false}],
-    use: [pngcrush()]
-  }))
-  .pipe(gulp.dest('./public/img'))
-  .pipe(notify("Finished images task!"));
-});
+gulp.task('build', () => {
+    runSequence('pub-delete', ['sass', 'js', 'fonts', 'images', 'build-functions'], 'hugo')
+})
+
+gulp.task('build-preview', () => {
+    runSequence('pub-delete', ['sass', 'js', 'fonts', 'images', 'build-functions'], 'hugo-preview')
+})
 
 
-gulp.task('copy', function() {
- gulp.src('./src/img/**/*')
-  .pipe(gulp.dest('./public/img'))
-  .pipe(reload({stream:true}))
-});
+gulp.task('build-functions', (cb) => {
+
+    fs.readdir('./src/lambda', (err, files) => {
+        if (err) {
+            cb(err);
+        }
+        if (!files.filter(file => file.endsWith('.js')).length) {
+            console.log('No Netlify functions.');
+            cb();
+            return;
+        }
+        return spawn('netlify-lambda', ['build', 'src/lambda'], { stdio: 'inherit' }).on('close', (code) => {
+            if (code === 0) {
+                cb();
+            } else {
+                console.log('netlify-lambda failed.');
+                cb('netlify-lambda failed.');
+            }
+        })
+    })
+
+})
 
 
+gulp.task('hugo', (cb) => {
+    let baseUrl = process.env.NODE_ENV === 'production' ? process.env.URL : process.env.DEPLOY_PRIME_URL;
+    let args = baseUrl ? ['-b', baseUrl] : [];
 
-gulp.task('browser-sync', function() {
-  browserSync({
-    server: {
-      baseDir: bases.dist
+    return spawn('hugo', args, { stdio: 'inherit' }).on('close', (code) => {
+        if (suppressHugoErrors || code === 0) {
+            browserSync.reload()
+            cb()
+        } else {
+            console.log('hugo command failed.');
+            cb('hugo command failed.');
+        }
+    })
+})
+
+
+gulp.task('hugo-preview', (cb) => {
+    let args = ['--buildDrafts', '--buildFuture'];
+    if (process.env.DEPLOY_PRIME_URL) {
+        args.push('-b')
+        args.push(process.env.DEPLOY_PRIME_URL)
     }
-  });
+    return spawn('hugo', args, { stdio: 'inherit' }).on('close', (code) => {
+        if (suppressHugoErrors || code === 0) {
+            browserSync.reload()
+            cb()
+        } else {
+            console.log('hugo command failed.');
+            cb('hugo command failed.');
+        }
+    })
+})
+
+// --
+
+gulp.task('sass', () => {
+    return gulp.src([
+        'src/sass/app.scss'
+    ])
+    .pipe($.plumber({ errorHandler: onError }))
+    .pipe($.print())
+    .pipe($.if(!isProduction, $.sassLint()))
+    // .pipe($.if(!isProduction, $.sassLint.format()))
+    .pipe($.sass({ precision: 5, importer: tildeImporter }))
+    .pipe($.autoprefixer(['ie >= 10', 'last 2 versions']))
+    .pipe($.if(isProduction, $.cssnano({ discardUnused: false, minifyFontValues: false })))
+    .pipe($.size({ gzip: true, showFiles: true }))
+    .pipe(gulp.dest('static/css'))
+    .pipe(browserSync.stream())
+})
+
+gulp.task('js-watch', ['js'], (cb) => {
+    browserSync.reload();
+    cb();
 });
 
-gulp.task('watch', function() {
-  gulp.watch(bases.app + 'scss/**/*.scss', ['styles']);
-  gulp.watch(bases.app + 'pug/**/*.pug', ['pug']);
-  gulp.watch(bases.app + 'data/**/*', ['pug']);
-  gulp.watch(bases.app + 'blogPosts/*.md', ['pug']);
-  gulp.watch(bases.app + 'img/*', ['copy']);
-  gulp.watch(bases.app + 'js/*', ['scripts']);
+gulp.task('js', () => {
+    return gulp.src([
+        'src/js/**/*.js'
+    ])
+    .pipe($.plumber({ errorHandler: onError }))
+    .pipe($.print())
+    .pipe($.babel())
+    .pipe($.concat('app.js'))
+    .pipe($.if(isProduction, $.uglify()))
+    .pipe($.size({ gzip: true, showFiles: true }))
+    .pipe(gulp.dest('static/js'))
+})
+
+gulp.task('fonts', () => {
+    return gulp.src('src/fonts/**/*.{woff,woff2}')
+        .pipe(gulp.dest('static/fonts'));
 });
 
-
-
-
-
-gulp.task('default', function(done) {
-  runSequence('browser-sync', 'styles', 'pug', 'scripts', 'copy', 'watch', done);
+gulp.task('images', () => {
+    return gulp.src('src/images/**/*.{png,jpg,jpeg,gif,svg,webp,ico}')
+        .pipe($.newer('static/images'))
+        .pipe($.print())
+        .pipe($.imagemin())
+        .pipe(gulp.dest('static/images'));
 });
 
-gulp.task('build', function(done) {
-  runSequence('styles', 'pug', 'scripts', 'copy', done);
-});
+gulp.task('cms-delete', () => {
+    return del(['static/admin'], { dot: true })
+})
 
-
+gulp.task('pub-delete', () => {
+    return del(['public/**', '!public', 'functions/**', '!functions'], {
+      // dryRun: true,
+      dot: true
+    }).then(paths => {
+      console.log('Files and folders deleted:\n', paths.join('\n'), '\nTotal Files Deleted: ' + paths.length + '\n');
+    })
+})

@@ -1,0 +1,18 @@
+
+
+{{ define "main" }}
+    
+  <section class="section section-pets">
+    <div class="section-title">
+          <meta itemprop="mainEntityOfPage" content="{{.Permalink}}">
+          <h4 class="title">Mascotas</h4>
+          <img src="/images/pawprints.svg" alt="pawn prints logo">
+    </div>
+    <div class="cards cards-pets">      
+      {{ range .Pages.Reverse}} 
+        {{ block "pets-card" . }}{{ partial "pets-card.html" . }}{{ end }}
+      {{ end }}
+    </div>
+  </section> 
+
+{{ end }}

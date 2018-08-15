@@ -1,0 +1,137 @@
+
+.blogPost {
+  max-width: 800px;
+  margin: auto;
+  padding-top: 15vh;
+  
+  background: $full-white;
+
+ 
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  strong {
+    color: $black;
+  }
+  
+  &__title,
+  &__date,
+  &__caption,
+  &__body,
+  &__author {
+    padding: 2px 20px;
+    color: hsl(0,0%,30%);
+  }
+
+  &__body {    
+    max-width: 600px;
+  }
+
+  &__title {
+    color: $full-black;
+    font-size: 1.8rem;
+
+  }
+
+  &__category {
+    display: inline-block;
+    text-align: center;
+    margin: 0;
+    margin-top: 40px;
+    margin-left: 20px;
+    padding: 5px 10px;
+    background: $secundary-color;
+    color: $full-white;
+    text-transform: capitalize;
+
+  }
+
+
+  &__date,
+  &__caption {
+    color: hsl(0,0%,60%);
+    font-size: 1rem;
+  }
+
+  &__date {
+    padding-left: 10px;
+    @include flexCenter;
+  }
+
+
+  &__caption {
+    text-align: center;
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  &__authorSpace {
+    width: 100%;
+    padding: 20px;
+    padding-right: 10px;
+    color: $gray;
+    display: block;
+    border-top: 2px solid $silver;   
+  }
+
+  &__author {
+    font-size: 1rem;
+    padding-right: 10px;
+    color: $black;
+    @include flexCenter;
+
+    // a{
+    //   text-decoration: underline;     
+    // }
+  }
+
+  &__sub-headline-wrapper {
+    display: flex;
+    align-content: center;
+  }
+
+  &__tags{
+    display: flex;
+    padding-left: 20px;
+    & > p {
+      background: $primary-color;
+      color:$full-white;
+      margin-right: 10px;
+      padding: 5px;
+    }
+  }
+
+
+  @include media($medium-min){
+    max-width: 1000px;
+    padding-top: 20vh;
+    // margin-top: 15vh;
+
+    &__body {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+#disqus_thread{
+  padding: 20px;
+}
+
+
+
+.share-pitch {
+  max-width: 600px;
+  margin-top: 50px;
+  padding: 20px;
+  span{
+    color: hsl(0,0%,0%);
+    font-weight: bold;    
+  }
+}
+
+
+

@@ -1,0 +1,121 @@
+{{define "main"}}
+
+<section itemscope="" itemtype="https://schema.org/Blog"  style="background-color: #fff">
+      <article  class="section blogPost" itemprop="blogPost" itemscope="" itemtype="https://schema.org/BlogPosting">
+        
+        <meta itemprop="mainEntityOfPage" content="{{.Permalink}}">
+        <div class="blogPost__article-wrapper">
+          <div class="blogPost__article-content">
+            <h1 itemprop="name headline" class="blogPost__title">{{.Title}}</h1>
+            <div class="blogPost__sub-headline-wrapper">
+              <p class="blogPost__author"><a href="#" rel="author" title="ver articulos del autor">{{.Params.author}}</a></p>
+              <p>-</p>
+              <p class="blogPost__date">
+                <time datetime="{{.Date}}" itemprop="datePublished">{{dateFormat "2 Jan 2006" .Date}}</time>
+              </p>
+            </div>
+            <meta itemprop="dateModified" content="{{.Lastmod}}">
+
+          
+
+
+            <div class="share-buttons">
+              
+              <a href="https://www.facebook.com/sharer/sharer.php?u={{.Permalink}}" target="_blank"><img src="/images/facebook-logo-color.svg" alt="Facebook share button" class="share__fb"></a>
+              
+              <a href="https://twitter.com/home?status={{.Title}} {{.Permalink}}" target="_blank"><img src="/images/twitter-logo-color.svg" alt="Twitter share button" class="share__tw"></a>
+              
+              <a href="whatsapp://send?text={{.Title}} {{.Permalink}}" target="_blank"><img src="/images/whatsapp-logo-color.svg" alt="whatsapp share button" class="share__ws"></a>
+            </div>
+
+
+
+
+
+            <figure itemprop="image" itemscope="" itemtype="https://schema.org/ImageObject">
+              <img src="{{.Params.img}}" alt="{{.Params.imgAlternativeText}}" itemprop="url" class="blogPost__img">
+              <figcaption itemprop="caption" class="blogPost__caption">Photo by <a href="{{.Params.imgAuthorUrl}}" target="_blank">{{.Params.imgAuthor}}</a> from <a href="{{.Params.imgOriginalSourceUrl}}" target="_blank">{{.Params.imgOriginalSource}}</a></figcaption>          
+            </figure>
+            
+            <div class="blogPost__body" itemprop="articleBody">
+              {{.Content}}
+            </div>
+            
+
+            <p class="share-pitch"> Si te gustó este artículo <span> compártelo</span> para que difundamos más sobre nuestro amor por los animales.</p>
+
+            <div class="share-buttons">
+              
+              <a href="https://www.facebook.com/sharer/sharer.php?u={{.Permalink}}" target="_blank"><img src="/images/facebook-logo-color.svg" alt="Facebook share button" class="share__fb"></a>
+              
+              <a href="https://twitter.com/home?status={{.Title}} {{.Permalink}}" target="_blank"><img src="/images/twitter-logo-color.svg" alt="Twitter share button" class="share__tw"></a>
+              
+              <a href="whatsapp://send?text={{.Title}} {{.Permalink}}" target="_blank"><img src="/images/whatsapp-logo-color.svg" alt="whatsapp share button" class="share__ws"></a>
+            </div>
+
+
+            <p class="blogPost__category">{{ range .Params.categories }} <a href="../../categories/{{.}}">{{ . }}</a>{{ end }} </p>
+
+            <div class="blogPost__tags">
+              {{ range .Params.tags }}
+                <p class="tag"><a href="../../tags/{{.}}">{{ . }}</a></p>
+              {{ end }}
+            </div>
+          </div>
+          
+          <div class="l-center blogPost__article-adds">
+            <p style="text-align: center;margin: 0 auto">Anuncio</p>
+          </div>
+
+        </div>
+
+
+
+        <span itemprop="author" itemscope="" itemtype="https://schema.org/Person" class="blogPost__authorSpace">
+          <a href="#" rel="author" itemprop="url" title="Ver articulos del autor"><span itemprop="name">{{.Params.author}}</span></a>
+        </span>
+
+        <span itemprop="publisher" itemscope="" itemtype="https://schema.org/Organization">
+          <meta itemprop="name" content=".Site.Title">
+          <span itemprop="logo" itemscope="" itemtype="https://schema.org/ImageObject">
+            <meta itemprop="url" content="{{.Site.BaseURL}}{{.Site.Params.logoUrlPng}}"> 
+            <meta itemprop="width" content="60">
+            <meta itemprop="height" content="60">
+          </span>
+        </span>
+        
+        <p class="recommendations-title">Artículos relacionados:</p>  
+        <div class="recommendations">
+          {{ $related := .Site.RegularPages.Related . | first 5 }}
+            {{ with $related }}
+            <ul>
+              {{ range . }}
+                <li class="recommendation-card"> 
+                  <p class="recommendation-card__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></p>
+                </li>
+              {{ end }}
+            </ul>
+          {{ end }}
+        </div>
+
+        <div class="comments">
+          <div id="disqus_thread"></div>
+          <script>
+            var disqus_config = function () {
+            this.page.url = site.domain + post.Url;
+            this.page.identifier = site.domain + post.Url;
+            };
+            (function() { 
+            var d = document, s = d.createElement('script');
+            s.src = 'https://patiks.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+            })();
+          </script>          
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </article> 
+</section>
+
+
+{{end}}

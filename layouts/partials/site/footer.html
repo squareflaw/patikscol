@@ -1,0 +1,24 @@
+<footer class="footer" role="contentinfo" itemscope itemtype="https://schema.org/WPFooter">
+    <div class="footer__nav">
+      <div>
+        <p><a href="/"> Home</a></p>
+        <p><a href="/pets/">Mascotas</a></p>
+      </div>
+      <div>
+        <p><a href="/blog/"> Blog</a></p>
+        <p><a href="/about/">Sobre nosotros</a></p>
+      </div>
+    </div>
+
+    <p> &copy; {{ now.Format "2006" }} &middot; <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a> Hecho por <a href="https://instagram.com/squareflaw" target="_blank" class="blue-link"> Albin Garcia.</a> Repositorio de este sitio en  <a href="{{.Site.Params.repo}}" target="_blank" class="blue-link">Github.</a></p>
+
+    </div>
+
+    <div class="footer__icons">
+      <a href="https://instagram.com/squareflaw" target="_blank"> <img src="/images/instagram-logo-color.svg" alt="instagram logo" class="icon"></a>
+
+      <a href="https://github.com/squareflaw" target="_blank"> <img src="/images/github-logo-2.svg" alt="Github logo" class="icon"></a>
+      
+      <a href="https://twitter.com/squareflaw" target="_blank"> <img src="/images/twitter-logo-color.svg" alt="Twitter logo" class="icon"></a>
+    </div>
+</footer>

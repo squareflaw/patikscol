@@ -1,0 +1,12 @@
+.blogPost__article-wrapper {
+
+  @include media($large-min){
+
+    display: flex;
+    flex-flow: row wrap;
+
+    .blogPost__article-content {
+      max-width: 600px;
+    }
+  }
+}

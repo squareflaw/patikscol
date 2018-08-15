@@ -1,0 +1,82 @@
+.card-pet-full{
+  width: 100%;
+  max-width: 800px;
+  margin-top: 0;
+  display: flex;
+  flex-flow: row wrap;
+
+  p {
+    margin: 30px 0;
+  }
+
+  @include media($large-min){
+    margin: 0;
+    margin-left: 5vw;
+  }
+
+
+  .card__img{
+    width: auto;
+    height: auto;
+    max-width: 300px;
+    max-height: 300px;
+    margin-right: 40px;
+  }
+
+  .card-pet__description{
+    color: $black;
+  }
+
+  span {
+    color: $black;
+    font-weight: bold;
+  }
+
+  .wrapper{
+    max-width: 350px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    
+    @include media($large-min){
+      padding: 0 20px;
+    }
+
+
+  }
+
+  .share-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .share-buttons{
+      padding-left: 0;
+    }
+  }
+}
+
+.pet-profile {
+  background: #fff;
+
+  .section-title{
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 80px 0 50px;
+  }
+}
+
+.see-also{
+  border-top: 2px solid $silver;
+
+  .recommendations-title{
+    color: $secundary-color;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .recommendations{
+    max-width: 500px;
+    margin: auto;
+  }
+}

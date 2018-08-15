@@ -1,0 +1,138 @@
+{{ define "main" }} 
+  <section class="banner">
+      <p class="banner__text">El <span>amor</span> no se puede comprar, pero se puede <span>rescatar.</span></p>
+      <img src="{{.Params.homeImg}}" alt="{{.Params.homeImgAlternativeText}}" class="banner__img">
+  
+  </section>
+  <div class="slogan">
+    <h1 class="slogan__text">{{.Params.siteDescription}}</h1>  
+  </div>
+
+
+  <div class="illustrations">
+      <div class="illustration">
+        <img src="{{.Params.illustrationA__img}}" alt="{{.Params.illustrationA__imgAlternativeText}}" class="illustration__img">
+        <div class="illustration__content">
+          <p class="title">{{.Params.illustrationA__title}}</p>
+          <p class="content">{{.Params.illustrationA__text}}</p>
+        </div>
+      </div>
+
+      <div class="illustration">
+        <img src="{{.Params.illustrationB__img}}" alt="{{.Params.illustrationB__imgAlternativeText}}" class="illustration__img">
+        <div class="illustration__content">
+          <p class="title">{{.Params.illustrationB__title}}</p>
+          <p class="content">{{.Params.illustrationB__text}}</p>
+        </div>
+      </div>
+
+      <div class="illustration">
+        <img src="{{.Params.illustrationC__img}}" alt="{{.Params.illustrationC__imgAlternativeText}}" class="illustration__img">
+        <div class="illustration__content">
+          <p class="title">{{.Params.illustrationC__title}}</p>
+          <p class="content">{{.Params.illustrationC__text}}</p>
+        </div>
+      </div>
+  </div>
+
+  <section class="section section-pets">
+      <div class="section-title">
+        <h4 class="title">Mascotas</h4>
+        <img src="/images/pawprints.svg" alt="pawn prints logo">
+      </div>
+      <div class="cards cards-pets">
+        {{ range first 3 ( where .Pages "Section" "pets").Reverse}} 
+          {{ block "pets-card" . }}{{ partial "pets-card.html" . }}{{ end }}
+        {{ end }}
+      </div>
+
+      <p class="see-all"> <a href="/pets/" class="button-all"> Ver todas</a></p>
+  </section>
+
+
+
+  <section itemscope="" itemtype="https://schema.org/Blog" class="section section-blog">
+      <div class="section-title">
+        <h4 class="title">Blogs Recientes</h4>
+        <img src="/images/blog-icon.svg" alt="pawn prints logo">
+      </div>
+
+      <div class="cards">
+        {{ range first 3 ( where .Pages "Section" "blog")}} 
+          {{ block "article-card-recent" . }}{{ partial "article-card.html" . }}{{ end }}
+        {{ end }} 
+      </div>
+
+      <p class="see-all"> <a href="./blog/" class="button-all">Ir al blog</a></p> 
+  </section>
+
+  <section itemscope="" itemtype="https://schema.org/Blog" class="section section-blog">
+      <div class="section-title">
+        <h4 class="title">Blogs Destacados</h4>
+        <img src="/images/blog-icon.svg" alt="pawn prints logo">
+      </div>
+
+      <div class="cards">
+        {{ range first 3 ( where .Pages "Section" "blog")}} 
+          {{if eq .Params.destacado true}}
+
+            {{ block "article-card-top" . }}{{ partial "article-card.html" . }}{{ end }}
+
+          {{end}}
+        {{ end }} 
+      </div>
+
+      <p class="see-all"> <a href="/blog/" class="button-all">Ir al blog</a></p> 
+  </section>
+
+
+  <section class="section section-insta">
+    <div class="section-title">
+      <h4 class="title">Hogares encontrados</h4>
+      <img src="./images/heartbeat-icon.svg" alt="pawn prints logo">
+    </div>
+    <div class="cards cards-insta">
+
+
+      <div class="card-insta">
+        
+        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/BlwR02zByNc/?utm_source=ig_embed" data-instgrm-version="9" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/BlwR02zByNc/?utm_source=ig_embed" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">Esta cuchitura fue adoptada por la Familia Quiroz 🌸💖 Gragias por aceptarla😃 Trabajemos juntos para regalar segundas oportunidades. Tantas mascotas sin hogar, haz la diferencia. ADOPTA, NO COMPRES🐾🐕❤️</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">Una publicación compartida de <a href="https://www.instagram.com/patikscol/?utm_source=ig_embed" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px;" target="_blank"> PatiKsCOL</a> (@patikscol) el <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2018-07-27T23:57:08+00:00">27 Jul, 2018 a las 4:57 PDT</time></p></div></blockquote> 
+      
+      </div>  
+      
+
+
+
+
+      <div class="card-insta">
+
+
+
+          <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/BkxssABHht5/?utm_source=ig_embed" data-instgrm-version="9" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/BkxssABHht5/?utm_source=ig_embed" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">Este pequeñín ya tiene nuevo hogar 😃🐕 Gracias a la familia Figueroa por aceptarlo como nuevo miembro🙏❤️</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">Una publicación compartida de <a href="https://www.instagram.com/patikscol/?utm_source=ig_embed" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px;" target="_blank"> PatiKsCOL</a> (@patikscol) el <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2018-07-03T16:39:42+00:00">3 Jul, 2018 a las 9:39 PDT</time></p></div></blockquote> <script async defer src="//www.instagram.com/embed.js"></script>
+
+
+        </div>
+    </div>
+
+    <p class="see-all">Puedes ver todos los hogares encontrados en nuestra cuenta de Instagram <a href="{{.Site.Params.instagramUrl}}" target="_blank" class="insta-link">{{.Site.Params.instagramUser}}</a></p>
+  </section>      
+
+
+  <section class="section section-about">
+      <div class="section-title">          
+        <h4 class="title">Sobre nosotros</h4>
+        <img src="/images/group-icon.svg" alt="pawn prints logo"> 
+      </div>       
+      <div> 
+        <img src="./images/us.jpg" alt="Photo with all the members of the organization" class="section__img">
+  
+        <div class="section_content">
+          <p>{{.Params.sobreNosotros}}</p>
+          <p class="see-all"><a href="/about/" class="button=all"> Más sobre nosotros</a></p>
+        </div>
+      </div>
+  </section>
+
+
+    
+{{ end }}
