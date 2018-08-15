@@ -1,18 +1,48 @@
 backend:
-  name: github
+  name: git-gateway
   repo: repo
   branch: master
   
-media_folder: "static/uploads"
-public_folder: "/uploads"
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
+
+
 collections:
-  
-  - name: "page"
-    label: "Page"
-    folder: "content"
+  - name: "blog" 
+    label: "Blog" # Used in the UI
+    folder: "content/blog" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+      - {label: "Titulo", name: "title", widget: "string"}
+      - {label: "Descripción", name: "description", widget: "string"}
+      - {label: "Categoria", name: "categories", widget: "list"}
+      - {label: "Etiquetas", name: "tags", widget: "list"}
+      - {label: "Autor", name: "author", widget: "string"}
+      - {label: "Fecha de publicacion", name: "date", widget: "datetime"}
+      - {label: "Imagen principal", name: "img", widget: "image"}
+      - {label: "Texto alternativo de imagen", name: "imgAlternativeText", widget: "string"}
+      - {label: "Fuente de la imagen", name: "imgOriginalSource", widget: "string", default: "pexels"}
+      - {label: "Direccion url de la Fuente", name: "imgOriginalSourceUrl", widget: "string", default: "https://pexels.com"}
+      - {label: "Autor de la imagen", name: "imgOAuthor", widget: "string"}
+      - {label: "Direccion url del Autor", name: "imgOAuthorUrl", widget: "string", default: "https://pexels.com/"}
+      - {label: "Resaltar articulo", name: "destacado", widget: "boolean"}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "pets"
+    label: "Mascotas"
+    folder: "content/pets"
     create: true
     slug: "{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Body", name: "body", widget: "markdown" }
+    fields: 
+      - {label: "Layout", name: "layout", widget: "hidden", default: "pets"}
+      - {label: "Titulo", name: "title", widget: "string"}
+      - {label: "Nombre", name: "name", widget: "string"}
+      - {label: "Descripción", name: "description", widget: "string"}
+      - {label: "Edad", name: "age", widget: "string"}
+      - {label: "Foto", name: "img", widget: "image"}
+      - {label: "Ubicación", name: "location", widget: "string"}
+      - {label: "Teléfono", name: "phone", widget: "string"}
+      - {label: "fecha de publicacion", name: "date", widget: "datetime"}
+      - {label: "Body", name: "body", widget: "markdown"}
