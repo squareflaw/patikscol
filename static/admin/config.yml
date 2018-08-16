@@ -17,11 +17,14 @@ collections:
       - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
       - {label: "Titulo", name: "title", widget: "string"}
       - {label: "Descripción", name: "description", widget: "string"}
+      - {label: "Imagen principal del articulo", name: "img", widget: "image"}
       - {label: "Categoria", name: "categories", widget: "list"}
       - {label: "Etiquetas", name: "tags", widget: "list"}
       - {label: "Autor", name: "author", widget: "string"}
+      - {label: "Direccion url del Autor (twitter,instagram, etc)", name: "authorLink", widget: "string", default: "ej: https://twitter.com/usuarioDelAutor"}
+      - {label: "imagen de perfil del autor", name: "authorImg", widget: "image"}
+      - {label: "Breve bio del autor", name: "authorBio", widget: "text"}
       - {label: "Fecha de publicacion", name: "date", widget: "datetime"}
-      - {label: "Imagen principal", name: "img", widget: "image"}
       - {label: "Texto alternativo de imagen", name: "imgAlternativeText", widget: "string"}
       - {label: "Fuente de la imagen", name: "imgOriginalSource", widget: "string", default: "pexels"}
       - {label: "Direccion url de la Fuente", name: "imgOriginalSourceUrl", widget: "string", default: "https://pexels.com"}

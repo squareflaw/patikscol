@@ -26,9 +26,12 @@
     color: hsl(0,0%,30%);
   }
 
-  &__body {    
+  &__body,
+  &__author-bio {    
     max-width: 600px;
   }
+
+
 
   &__title {
     color: $full-black;
@@ -51,7 +54,8 @@
 
 
   &__date,
-  &__caption {
+  &__caption,
+  &__author-bio {
     color: hsl(0,0%,60%);
     font-size: 1rem;
   }
@@ -73,9 +77,14 @@
     width: 100%;
     padding: 20px;
     padding-right: 10px;
-    color: $gray;
+    color: $black;
     display: block;
     border-top: 2px solid $silver;   
+
+    a{
+      color: $secundary-color;
+      text-decoration: underline;
+    }
   }
 
   &__author {

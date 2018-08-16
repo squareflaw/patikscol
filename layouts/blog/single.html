@@ -8,7 +8,7 @@
           <div class="blogPost__article-content">
             <h1 itemprop="name headline" class="blogPost__title">{{.Title}}</h1>
             <div class="blogPost__sub-headline-wrapper">
-              <p class="blogPost__author"><a href="#" rel="author" title="ver articulos del autor">{{.Params.author}}</a></p>
+              <p class="blogPost__author"><a href="{{.Params.authorLink}}" target="_blank" rel="author" title="ver perfil del autor">{{.Params.author}}</a></p>
               <p>-</p>
               <p class="blogPost__date">
                 <time datetime="{{.Date}}" itemprop="datePublished">{{dateFormat "2 Jan 2006" .Date}}</time>
@@ -68,7 +68,11 @@
 
 
         <span itemprop="author" itemscope="" itemtype="https://schema.org/Person" class="blogPost__authorSpace">
-          <a href="#" rel="author" itemprop="url" title="Ver articulos del autor"><span itemprop="name">{{.Params.author}}</span></a>
+          <div class="author-profile">
+            <img src="{{.Params.authorImg}}" alt="imagen de perfil del author" width="30px" height="30px" style="border-radius: 50%">
+            <a href="{{.Params.authorLink}}" rel="author" itemprop="url" title="Ver perfil del autor"><span itemprop="name">{{.Params.author}}</span></a>
+          </div>
+          <p class="blogPost__author-bio">{{.Params.authorBio}}</p>
         </span>
 
         <span itemprop="publisher" itemscope="" itemtype="https://schema.org/Organization">

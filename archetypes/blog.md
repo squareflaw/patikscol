@@ -13,7 +13,7 @@ tags:
 - etc
 
 author: "Nombre del author"
-authorLink: "ej:https://twitter.com/usuarioDelAuthor"
+authorLink: "https://twitter.com/usuarioDelAuthor"
 
 date: {{ .Date }}
 
