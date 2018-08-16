@@ -4,7 +4,6 @@ title: Articulo de prueba
 description: descripcion de prueba
 categories:
   - prueba
-  - test
 tags:
   - ensayo
   - testeando
