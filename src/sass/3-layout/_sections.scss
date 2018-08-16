@@ -95,7 +95,8 @@ a.insta-link {
     justify-content: center;
     flex-flow: row wrap;
   }
-  & > img {
+  & > img ,
+  .section__img{
     width: 100vw;
     max-width: 400px;
     max-height: 400px;
@@ -119,6 +120,9 @@ a.insta-link {
     max-width: 400px;
     margin: auto;
   }
+
+  .section__img
+
   .section__content {
     display: flex;
     flex-direction: column;
