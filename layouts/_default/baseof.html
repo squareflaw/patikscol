@@ -60,6 +60,14 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Montserrat">
 
         <link rel="stylesheet" href="/css/app.css">
+        <script src="https://www.googletagmanager.com/gtag/js?id={{.Site.googleAnalytics}}" async=""></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+           gtag('config', '{{.Site.googleAnalytics}}');
+        </script>
+
         {{ .Hugo.Generator }}
 
     </head>
