@@ -1,5 +1,5 @@
 {
-  "name": "atlas",
+  "name": "patiks",
   "private": true,
   "scripts": {
     "build": "gulp build",

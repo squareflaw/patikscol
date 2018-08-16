@@ -9,6 +9,8 @@ description: "Somos una organización sin fines de lucro dedicada a educar, info
 groupImg: "/images/us.jpg"
 groupImgAlternativeText: "Group photo"
 
+phone: "+58 ejemplo"
+
 
 
 draft: false
