@@ -2,18 +2,20 @@
 layout: blog
 title: Articulo de prueba
 description: descripcion de prueba
+img: /images/uploads/dog-2.jpg
+imgAlternativeText: perro desconfiado
 categories:
   - prueba
 tags:
   - ensayo
   - testeando
 author: Albin Garcia
-authorLink: https://instagram.com/squareflaw
-authorBio: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates incidunt enim quasi laborum ratione nesciunt quisquam.
-
+authorLink: 'https://instagram.com/squareflaw'
+authorImg: /images/uploads/profile-3.jpg
+authorBio: >-
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates incidunt
+  enim quasi laborum ratione nesciunt quisquam.
 date: 2018-08-16T13:57:02.513Z
-img: /images/uploads/dog-2.jpg
-imgAlternativeText: perro desconfiado
 imgOriginalSource: pexels
 imgOriginalSourceUrl: 'https://pexels.com'
 imgAuthor: Author
