@@ -17,15 +17,15 @@ collections:
       - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
       - {label: "Titulo", name: "title", widget: "string"}
       - {label: "Descripción", name: "description", widget: "string"}
-      - {label: "Categoria", name: "categories", widget: "list",default: "ej:Salud"}
-      - {label: "Etiquetas", name: "tags", widget: "list",default: "ej:perros, ej:gatos, ej:salud"}
+      - {label: "Categoria", name: "categories", widget: "list", default: "ej:Salud"}
+      - {label: "Etiquetas", name: "tags", widget: "list", default: "ej:perros, gatos, salud"}
       - {label: "Autor", name: "author", widget: "string"}
       - {label: "Fecha de publicacion", name: "date", widget: "datetime"}
       - {label: "Imagen principal", name: "img", widget: "image"}
       - {label: "Texto alternativo de imagen", name: "imgAlternativeText", widget: "string"}
       - {label: "Fuente de la imagen", name: "imgOriginalSource", widget: "string", default: "pexels"}
       - {label: "Direccion url de la Fuente", name: "imgOriginalSourceUrl", widget: "string", default: "https://pexels.com"}
-      - {label: "Autor de la imagen", name: "imgAuthor", widget: "string",default: "Author"}
+      - {label: "Autor de la imagen", name: "imgAuthor", widget: "string", default: "Author"}
       - {label: "Direccion url del Autor", name: "imgAuthorUrl", widget: "string", default: "https://pexels.com/"}
       - {label: "Resaltar articulo", name: "destacado", widget: "boolean"}
       - {label: "¿Guardar Articulo sin publicar?", name: "draft", widget: "boolean"}
