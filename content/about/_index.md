@@ -1,20 +1,7 @@
  ---
-
 title: "Sobre nosotros"
 
 description: "Somos una organización sin fines de lucro dedicada a educar, informar y fomentar la adopción para así concienciar a la población sobre la tenencia responsable de un animal."
-
-
-
-groupImg: "/images/us.jpg"
-groupImgAlternativeText: "Group photo"
-
-phone: "+58 ejemplo"
-
-
-
-draft: false
-
 
 
 ---

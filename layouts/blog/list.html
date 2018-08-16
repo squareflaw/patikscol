@@ -1,33 +1,35 @@
 {{ define "main" }}
-  <section itemscope="" itemtype="https://schema.org/Blog" class="section section-blog">
-      <div class="section-title">
-        <h4 class="title">Artículos</h4>
-        <img src="/images/blog-icon.svg" alt="pawn prints logo">
-      </div>
+  <div class="bloglist-wrapper">
 
-      <div class="cards">
-        {{ range .Pages}} 
-          {{ block "article-card-recent" . }}{{ partial "article-card.html" . }}{{ end }}
-        {{ end }} 
-      </div>
-  </section>
-  <!-- <section>
-  <ul>
-    {{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
-      <li><a href="{{ "/" | safeURL}}{{ $taxonomyname | urlize }}">{{ $taxonomyname }}</a>
-        <ul>
-          {{ range $key, $value := $taxonomy }}
-          <li> <a href="/{{$taxonomyname}}/{{$key}}">{{ $key }}</a></li>
-                <ul>
-                {{ range $value.Pages }}
-                    <li><a href="{{.URL | safeURL}}"> {{ .LinkTitle }} </a> </li>
-                {{ end }}
-                </ul>
-          {{ end }}
-        </ul>
-      </li>
-    {{ end }}
-  </ul>
-</section> -->
+    
+    <section itemscope="" itemtype="https://schema.org/Blog" class="section section-blog">
+        <div class="section-title">
+          <h4 class="title">Artículos</h4>
+          <img src="/images/blog-icon.svg" alt="pawn prints logo">
+        </div>
+
+        <div class="cards">
+          {{ range .Pages}} 
+            {{ block "article-card-recent" . }}{{ partial "article-card.html" . }}{{ end }}
+          {{ end }} 
+        </div>
+    </section>
+
+
+    <section class="categories">
+      <ul class="list">
+        {{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
+          <li class="list__title"><a href="{{ "/" | safeURL}}{{ $taxonomyname | urlize }}">{{ $taxonomyname }}:</a>
+            <ul class="list">
+              {{ range $key, $value := $taxonomy }}
+              <li class="list__item"> <span>> </span><a href="/{{$taxonomyname}}/{{$key}}">{{ $key }}</a></li>
+              {{ end }}
+            </ul>
+          </li>
+        {{ end }}
+      </ul>
+    </section>
+  </div>
+
 
 {{ end }}

@@ -1,17 +1,37 @@
 {{define "main"}}
 
-<section itemscope="" itemtype="https://schema.org/Blog" class="section section-blog">
-      <div class="section-title">
-        {{ $lastUrlElement := index (last 1 (split (delimit (split .URL "/") "," "") ",")) 0 }}
-        <h4 class="title">Artículos: {{$lastUrlElement}}</h4>
-        <img src="/images/blog-icon.svg" alt="pawn prints logo">
-      </div>
+<div class="bloglist-wrapper">
 
-      <div class="cards">
-        {{ range .Pages}} 
-          {{ block "article-card-recent" . }}{{ partial "article-card.html" . }}{{ end }}
-        {{ end }} 
-      </div>
+  <section itemscope="" itemtype="https://schema.org/Blog" class="section section-blog">
+        <div class="section-title">
+          {{ $lastUrlElement := index (last 1 (split (delimit (split .URL "/") "," "") ",")) 0 }}
+          <h4 class="title">Artículos: <span>{{$lastUrlElement}}</span></h4>
+          <img src="/images/blog-icon.svg" alt="pawn prints logo">
+        </div>
+
+        <div class="cards">
+          {{ range .Pages}} 
+            {{ block "article-card-recent" . }}{{ partial "article-card.html" . }}{{ end }}
+          {{ end }} 
+        </div>
   </section>
+  
+
+
+  <section class="categories">
+    <ul class="list">
+      {{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
+        <li class="list__title"><a href="{{ "/" | safeURL}}{{ $taxonomyname | urlize }}">{{ $taxonomyname }}:</a>
+          <ul class="list">
+            {{ range $key, $value := $taxonomy }}
+            <li class="list__item"> <span>> </span><a href="/{{$taxonomyname}}/{{$key}}">{{ $key }}</a></li>
+            {{ end }}
+          </ul>
+        </li>
+      {{ end }}
+    </ul>
+  </section>
+</div>
+
 
 {{end}}

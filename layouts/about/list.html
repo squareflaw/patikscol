@@ -1,18 +1,34 @@
 {{define "main"}}
 
 <section class="section section-about">
+
   <div class="section-title">
     <meta itemprop="mainEntityOfPage" content="ogUrl">
     <h4 class="title">Sobre nosotros</h4>
     <img src="/images/group-icon.svg" alt="pawn prints logo">
   </div>
-  <img src="{{.Params.groupImg}}" alt="Photo with all the members of the organization" class="section__img">
+
+
+<!--   <img src="{{.Params.groupImg}}" alt="Photo with all the members of the organization" class="section__img">
+ -->
+
   
   {{.Content}}
 
-  <p>Puedes contactarnos al <a href="tel: {{.Params.phone}}">{{.Params.phone}}</a></p>
 
-  <img src="{{.Site.Params.logoUrl}}" alt="Main logo">     
+
+<!--   <div class="contact">
+    <p class="contact__headline">Puedes contactarnos mediante</p>
+
+    <p>Correo electrónico: <a href="mailto:{{.Params.email}}" target="_blank">{{.Params.email}}</a></p>
+
+    <p>Instagram: <a href="https://instagram.com/{{.Params.instagram}}" target="_blank">{{.Params.instagram}}</a></p>
+
+  </div>
+
+  
+
+  <img src="{{.Site.Params.logoUrl}}" alt="Main logo" class="section-about__logo">  -->    
 
 </section>
 

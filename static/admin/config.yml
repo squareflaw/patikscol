@@ -57,7 +57,4 @@ collections:
       - {label: "Layout", name: "layout", widget: "hidden", default: "about"}
       - {label: "Encabezado", name: "title", widget: "string"}
       - {label: "Descripción corta de la organizacion", name: "description", widget: "string"}
-      - {label: "Foto del grupo", name: "groupImg", widget: "image"}
-      - {label: "Texto alternativo para la foto", name: "groupImgAlternativeText", widget: "string"}
-      - {label: "Teléfono de contacto", name: "phone", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}

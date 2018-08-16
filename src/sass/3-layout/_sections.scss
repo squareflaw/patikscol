@@ -39,6 +39,10 @@
 
   background: $full-white;
 
+  span {
+    text-transform: capitalize;
+  }
+
 
   .title {
     font-family: $font-family-display;
@@ -91,7 +95,7 @@ a.insta-link {
     justify-content: center;
     flex-flow: row wrap;
   }
-  .section__img {
+  & > img {
     width: 100vw;
     max-width: 400px;
     max-height: 400px;
@@ -99,12 +103,18 @@ a.insta-link {
   }
 
   p {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-  }  
+    max-width: 700px;
+    margin: 10px auto;
+    padding: 10px;
+  }
 
-  & > img:last-child{
+
+  a {
+    color: $blue;
+    text-decoration: underline;
+  }
+
+  .section-about__logo{
     width: 20vw;
     max-width: 400px;
     margin: auto;
@@ -114,6 +124,15 @@ a.insta-link {
     flex-direction: column;
     justify-content: space-between;
   }
+
+  .contact {
+    flex-direction: column;
+    &__headline{
+      font-weight: bold;
+      color: $low-gray;
+    }
+  }
+
 
   @include media($medium-min){
   }

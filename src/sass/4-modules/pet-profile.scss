@@ -4,6 +4,7 @@
   margin-top: 0;
   display: flex;
   flex-flow: row wrap;
+  justify-content: center;
 
   p {
     margin: 30px 0;
@@ -18,9 +19,13 @@
   .card__img{
     width: auto;
     height: auto;
+    margin: 0;
     max-width: 300px;
     max-height: 300px;
-    margin-right: 40px;
+
+    @include media($large-min){
+      margin-right: 40px;
+    }
   }
 
   .card-pet__description{

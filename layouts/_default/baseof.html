@@ -16,6 +16,7 @@
 
 
 
+
         <meta property="og:title" content="{{if eq .Type `pets`}}{{.Params.Name}} esta buscando un hogar{{else}}{{.Title}}{{end}}"/>
 
         <meta property="og:type" content="{{if eq .Type `blog`}}article{{else}}website{{end}}"/>
@@ -24,9 +25,7 @@
 
         <meta property="og:url" content=" {{.Permalink}} "/>
 
-        <meta property="og:image" content="{{if isset .Params `socialMediaImg`}}
-        {{.Site.BaseURL}}{{ .Params.socialMediaImg}}
-        {{else if isset .Params `img`}}{{.Site.BaseURL}}{{ .Params.img}}
+        <meta property="og:image" content="{{if isset .Params `img`}}{{.Site.BaseURL}}{{ .Params.img}}
         {{else}}{{.Site.BaseURL}}{{ .Site.Params.logoUrlPng}}{{end}}"/>
 
         <meta property="og:site_name" content="{{.Site.Title}} "/>
@@ -40,6 +39,8 @@
 
 
 
+
+
         <meta property="twitter:card" content="summary_large_image"/>
 
         <meta property="twitter:title" content="{{if eq .Type `pets`}}{{.Params.Name}} esta buscando un hogar{{else}}{{.Title}}{{end}}" />
@@ -48,18 +49,26 @@
 
         <meta property="twitter:description" content="{{if eq .Type `pets`}}{{.Content}}{{else}}{{with .Description}}{{.}}{{else}}{{.Site.Params.description}}{{end}}{{end}}"/>
 
-        <meta name="twitter:image" content="{{if isset .Params `socialMediaImg`}}{{.Site.BaseURL}}{{ .Params.socialMediaImg}}
-        {{else if isset .Params `img`}}{{.Site.BaseURL}}{{ .Params.img}}
+        <meta name="twitter:image" content="{{if isset .Params `img`}}{{.Site.BaseURL}}{{ .Params.img}}
         {{else}}{{.Site.BaseURL}}{{ .Site.Params.logoUrlPng}}
         {{end}}"/>
 
 
 
+
+
+
         <meta name="theme-color" content="{{.Site.Params.themeColor}}"/>
+
+
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Montserrat">
 
         <link rel="stylesheet" href="/css/app.css">
+
+
+
+
         <script src="https://www.googletagmanager.com/gtag/js?id={{.Site.Params.googleAnalyticsId}}" async=""></script>
         <script>
           window.dataLayer = window.dataLayer || [];
@@ -67,6 +76,8 @@
           gtag('js', new Date());
            gtag('config', '{{.Site.Params.googleAnalyticsId}}');
         </script>
+
+        
 
         {{ .Hugo.Generator }}
 
