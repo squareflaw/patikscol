@@ -69,8 +69,8 @@
 
         <span itemprop="author" itemscope="" itemtype="https://schema.org/Person" class="blogPost__authorSpace">
           <div class="author-profile">
-            <img src="{{.Params.authorImg}}" alt="imagen de perfil del author" class="author-img">
-            <a href="{{.Params.authorLink}}" rel="author" itemprop="url" title="Ver perfil del autor"><span itemprop="name">{{.Params.author}}</span></a>
+            <a href="{{.Params.authorLink}}" target="_blank"><img src="{{.Params.authorImg}}" alt="imagen de perfil del author" class="author-img"></a>
+            <a href="{{.Params.authorLink}}" rel="author" itemprop="url" title="Ver perfil del autor" target="_blank"><span itemprop="name">{{.Params.author}}</span></a>
           </div>
           <p class="blogPost__author-bio">{{.Params.authorBio}}</p>
         </span>

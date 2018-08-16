@@ -23,7 +23,7 @@ collections:
       - {label: "Etiquetas", name: "tags", widget: "list"}
       - {label: "Autor", name: "author", widget: "string"}
       - {label: "Direccion url del Autor (twitter,instagram, etc)", name: "authorLink", widget: "string", default: "ej: https://twitter.com/usuarioDelAutor"}
-      - {label: "imagen de perfil del autor", name: "authorImg", widget: "image"}
+      - {label: "imagen de perfil del autor (recomendado que sea pequeña)", name: "authorImg", widget: "image"}
       - {label: "Breve bio del autor", name: "authorBio", widget: "text"}
       - {label: "Fecha de publicacion del articulo", name: "date", widget: "datetime"}
       - {label: "Fuente de la imagen principal del articulo", name: "imgOriginalSource", widget: "string", default: "pexels"}
