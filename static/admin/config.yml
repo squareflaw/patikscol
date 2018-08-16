@@ -17,8 +17,8 @@ collections:
       - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
       - {label: "Titulo", name: "title", widget: "string"}
       - {label: "Descripción", name: "description", widget: "string"}
-      - {label: "Categoria", name: "categories", widget: "list", default: "ej:Salud"}
-      - {label: "Etiquetas", name: "tags", widget: "list", default: "ej:perros, gatos, salud"}
+      - {label: "Categoria", name: "categories", widget: "list"}
+      - {label: "Etiquetas", name: "tags", widget: "list"}
       - {label: "Autor", name: "author", widget: "string"}
       - {label: "Fecha de publicacion", name: "date", widget: "datetime"}
       - {label: "Imagen principal", name: "img", widget: "image"}
