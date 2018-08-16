@@ -1,33 +1,23 @@
 ---
-title: "¡Cero Chocolate Para Ti!"
-
-description: "El chocolate es uno de los envenenamientos en perros que más tratan los veterinarios."
-
+title: ¡Cero Chocolate Para Ti!
+description: >-
+  El chocolate es uno de los envenenamientos en perros que más tratan los
+  veterinarios.
 categories:
-- salud
-
+  - salud
 tags:
-- perros
-- cuidados
-- comida
-
-author: "Nombre del author"
-authorLink: "ej:https://twitter.com/usuarioDelAuthor"
-
-date: 2018-08-14T08:22:51-04:00
-
-
-img: "/images/cerochocolate.jpg"
-imgAlternativeText: "scared Dog"
-imgOriginalSource: "Instagram"
-imgOriginalSourceUrl: "https://www.instagram.com/"
-imgAuthor:  "@PatiksCOL" 
-imgAuthorUrl: "https://www.instagram.com/patikscol/"
-
+  - perros
+  - cuidados
+  - comida
+author: Nombre del author
+date: 2018-08-14T12:22:51.000Z
+img: /images/cerochocolate.jpg
+imgAlternativeText: scared Dog
+imgOriginalSource: Instagram
+imgOriginalSourceUrl: 'https://www.instagram.com/'
+imgOAuthor: patiks
+imgOAuthorUrl: 'https://instagram.com/patikscol'
 destacado: true
-
-draft: false
-
 ---
 
 El chocolate es uno de los envenenamientos en perros que más tratan los veterinarios. 
