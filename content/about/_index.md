@@ -13,7 +13,7 @@ otro párrafo
 
 etc...
 
-**contacto: **(formas de contacto de preferencia, todas son opcionales)
+**contacto:**(formas de contacto de preferencia, todas son opcionales)
 
 correo electrónico: [ejemp@gmail.com](mailto:ejemplo@gmail.com)
 
