@@ -2,7 +2,6 @@ baseURL = "https://patiks.ga"
 languageCode = "es-ve"
 title = "Patiks.ga"
 
-googleAnalytics = "UA-123606970-1"
 
 
 enableRobotsTXT = true
@@ -13,6 +12,7 @@ disableAliases = true
   disallow_search_engines = false # set robots.txt to disallow everything
   AuthorName = "Albin Garcia"
   GitHubUser = "squareflaw"
+  googleAnalyticsId = "UA-123606970-1"
 
   description = "Sitio web en el que puedes adopar a una mascota y aprender sobre el cuidado animal."
 
