@@ -17,7 +17,7 @@ hosting en **Netlify** y la gestion de contenidos con el **Netlify CMS**.
 
 Para empezar se deben de instalar las dependencias con el comando
 ```
-npm instal
+npm install
 ```
 Ya teniendolas instaladas tenemos varios comandos en el archivo `package.json`. Los mas importantes son:
 
