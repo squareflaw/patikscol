@@ -1,8 +1,5 @@
 # Patikscol
 
-Sitio web dedicado a fomentar la adopccion animal. Construido con el generador de sitios staticos **[Hugo](https://gohugo.io/)**,
-hosting en **Netlify** y la gestion de contenidos con el **Netlify CMS**.
-
 Responsive Website dedicated to encourage animal adoption. Built using the static site generator **[Hugo](https://gohugo.io/)**,
 hosted on **[Netlify](https://www.netlify.com/)**
 
