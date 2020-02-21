@@ -10,7 +10,7 @@ hosted on **[Netlify](https://www.netlify.com/)**
 
 
 ## Site's structure
-the two main folder
+the two main folders
 - `layouts` : Contains templates for articles and pets profiles:
   
   - `layouts/partials`: reusable elements like header, footer, pet-card and article-card
